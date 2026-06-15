@@ -1,6 +1,6 @@
-# Adonis Garcia - Portfolio Website
+# Joseph Decossard - Portfolio Website
 
-A modern, interactive portfolio website showcasing my journey as a Computer Science student, GLASS Scholar, and aspiring Software Engineer. Built with a focus on performance, accessibility, and user experience.
+A modern, interactive portfolio website showcasing my journey as a Computer Science graduate, security researcher, and Software Engineer. Built with a focus on performance, accessibility, and user experience.
 
 ## 🌟 Features
 
@@ -13,12 +13,11 @@ A modern, interactive portfolio website showcasing my journey as a Computer Scie
 - **Smooth Animations**: Scroll-triggered fade-in effects and smooth transitions
 - **Accessibility**: WCAG compliant with keyboard navigation and screen reader support
 
-### GLASS Honors Page (`glass.html`)
+### Cyber Lab Page (`glass.html`)
 - **Interactive 5 Windows Framework**: Explore Leadership, Global Competency, Academic Excellence, Service, and Professional Development
-- **Auto-scrolling Photo Gallery**: Showcases GLASS experiences with 10+ images
-- **Year-by-Year Journey Timeline**: Navigate through 4 years of growth and achievements
-- **Dynamic Navigation**: Separate navigation for GLASS-specific content
-- **NYU Purple Theme**: Honors program branding with professional aesthetics
+- **Timeline**: Navigate through growth and achievements
+- **Dynamic Navigation**: Separate navigation for cybersecurity-specific content
+- **Modern Dark Theme**: Professional hacker-inspired aesthetics
 - **UN SDG Integration**: Links projects to Sustainable Development Goals
 
 ## 🛠️ Tech Stack
@@ -35,16 +34,14 @@ A modern, interactive portfolio website showcasing my journey as a Computer Scie
 ```
 portfolio-main/
 ├── index.html                      # Main portfolio page
-├── glass.html                      # GLASS honors program page
+├── glass.html                      # Cyber Lab page
 ├── script.js                       # Main portfolio JavaScript
-├── glass.js                        # GLASS page JavaScript
-├── styles.css                      # All styles (main + GLASS)
+├── styles.css                      # All styles (main + Cyber Lab)
 ├── resume.json                     # Portfolio content data
-├── glass_portfolio_content.json   # GLASS-specific content
 ├── assets/                         # Images, logos, documents
 │   ├── *.jpg/png                   # Images for projects and experiences
-│   ├── Adonis_Garcia_Resume.pdf    # Downloadable resume
-│   └── glass-gallery-*.jpg         # GLASS photo gallery images
+│   ├── Joseph_Decossard_Resume.pdf # Downloadable resume
+│   └── *.svg                       # SVGs (such as MU logo)
 └── README.md                       # This file
 ```
 
@@ -200,14 +197,13 @@ This project is open source and available for educational purposes. Feel free to
 
 ## 📬 Contact
 
-- **Email**: adonisgarcia001@gmail.com
-- **LinkedIn**: [linkedin.com/in/adonis--garcia](https://linkedin.com/in/adonis--garcia)
-- **GitHub**: [github.com/adonis-garcia-git](https://github.com/adonis-garcia-git)
-- **Portfolio**: [View Live](https://adonis-garcia-git.github.io/portfolio)
+- **Email**: jedecossard@gmail.com
+- **LinkedIn**: [linkedin.com/in/josephdecossard](https://linkedin.com/in/josephdecossard)
+- **GitHub**: [github.com/jd24610](https://github.com/jd24610)
 
 ## 🙏 Acknowledgments
 
-- **NYU Tandon GLASS Program**: For the incredible opportunities and support
+- **Manhattan University**: For the supportive community and academic foundation
 - **Lucide Icons**: For the beautiful icon system
 - **IBM Plex Fonts**: For the modern, accessible typography
 
@@ -215,5 +211,5 @@ This project is open source and available for educational purposes. Feel free to
 
 **Built with curiosity, deployed with passion.** 🚀
 
-Last Updated: January 2026
+Last Updated: June 2026
 

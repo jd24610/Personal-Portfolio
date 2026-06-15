@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circle in MU green -->
+  <circle cx="100" cy="100" r="96" fill="#006633" stroke="#004d26" stroke-width="2"/>
+
+  <!-- Inner ring -->
+  <circle cx="100" cy="100" r="86" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+
+  <!-- MU Monogram -->
+  <!-- M -->
+  <text
+    x="52"
+    y="118"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="72"
+    font-weight="bold"
+    fill="white"
+    letter-spacing="-2"
+  >M</text>
+
+  <!-- U -->
+  <text
+    x="106"
+    y="118"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="72"
+    font-weight="bold"
+    fill="white"
+  >U</text>
+
+  <!-- Bottom text arc -->
+  <path id="bottom-arc" d="M 30,100 A 70,70 0 0,0 170,100" fill="none"/>
+  <text font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.85)" font-weight="600" letter-spacing="2">
+    <textPath href="#bottom-arc" startOffset="7%">MANHATTAN UNIVERSITY</textPath>
+  </text>
+
+  <!-- Top decorative line -->
+  <line x1="55" y1="140" x2="145" y2="140" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+</svg>

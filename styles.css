@@ -311,6 +311,30 @@ canvas#bg-canvas {
   color: var(--accent-main);
 }
 
+/* Cyber Lab special nav link */
+.primary-nav a.nav-cyberlab {
+  padding: 0.3rem 0.85rem;
+  border-radius: 3px;
+  border: 1px solid #39ff14;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #39ff14;
+  transition: all 0.25s ease;
+}
+
+.primary-nav a.nav-cyberlab:hover,
+.primary-nav a.nav-cyberlab:focus-visible {
+  background: rgba(57, 255, 20, 0.12);
+  box-shadow: 0 0 18px rgba(57, 255, 20, 0.35);
+  color: #39ff14;
+}
+
+.primary-nav a.nav-cyberlab::before {
+  display: none;
+}
+
 .nav-cta--desktop {
   display: inline-flex;
 }
@@ -946,6 +970,7 @@ main section {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  padding: 4px;
 }
 
 .carousel-card__logo-text {
@@ -1189,8 +1214,9 @@ main section {
 .education-logo__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  padding: 4px;
 }
 
 /* ============================================

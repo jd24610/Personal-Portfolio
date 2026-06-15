@@ -45,7 +45,7 @@
     'KERNEL PANIC - NOT SYNCING: FATAL EXCEPTION IN self_destruct.exe',
     '',
     'CPU: 0 PID: 1337 Comm: portfolio_daemon Not tainted 6.6.6-custom',
-    'Hardware name: Adonis Garcia Portfolio Machine',
+    'Hardware name: Joseph Decossard Portfolio Machine',
     '',
     'Call Trace:',
     ' [<0xdeadbeef>] explode_everything+0x42/0x100',
@@ -106,9 +106,9 @@
     }
 
     // Game rotation
-    var lastIndex = parseInt(sessionStorage.getItem('ag_sd_game_index') || '-1', 10);
+    var lastIndex = parseInt(sessionStorage.getItem('jd_sd_game_index') || '-1', 10);
     var nextIndex = (lastIndex + 1) % GAMES.length;
-    sessionStorage.setItem('ag_sd_game_index', String(nextIndex));
+    sessionStorage.setItem('jd_sd_game_index', String(nextIndex));
 
     // Hide boot content
     linesContainer.style.display = 'none';

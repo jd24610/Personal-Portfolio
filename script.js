@@ -19,8 +19,8 @@ const throttle = (func, delay = 16) => {
 // ============================================
 
 const DATA_PATH = 'resume.json';
-const RESUME_PATH = 'assets/Adonis_Garcia_Resume.pdf';
-const TAGLINE = 'software_engineer --passionate --impact';
+const RESUME_PATH = 'assets/Joseph_Decossard_Resume.pdf';
+const TAGLINE = 'cs_graduate --cybersecurity --full_stack';
 let resumeData = null;
 const siteHeader = document.querySelector('.site-header');
 
@@ -41,7 +41,7 @@ const bootSequence = (() => {
   const pageShell = document.querySelector('.page-shell');
 
   const BOOT_LINES = [
-    { text: '$ initializing adonis_garcia.portfolio v2.0 ...', cls: 'boot-line--ok', delay: 300 },
+    { text: '$ initializing joseph_decossard.portfolio v2.0 ...', cls: 'boot-line--ok', delay: 300 },
     { text: '[OK] kernel: display_engine loaded', cls: 'boot-line--ok', delay: 200 },
     { text: '[WARN] coffee_level critically low ... brewing', cls: 'boot-line--warn', delay: 200 },
     { text: '[OK] loading /modules/experience.js', cls: 'boot-line--ok', delay: 150 },
@@ -66,7 +66,7 @@ const bootSequence = (() => {
   const shouldSkip = () =>
     prefersReducedMotion ||
     !overlay ||
-    sessionStorage.getItem('ag_boot_played') === '1';
+    sessionStorage.getItem('jd_boot_played') === '1';
 
   const skipBoot = () => {
     if (overlay) overlay.remove();
@@ -142,7 +142,7 @@ const bootSequence = (() => {
             }
             overlay.addEventListener('animationend', () => {
               overlay.remove();
-              sessionStorage.setItem('ag_boot_played', '1');
+              sessionStorage.setItem('jd_boot_played', '1');
               resolve();
             }, { once: true });
           }, { once: true });
@@ -370,7 +370,7 @@ const renderHero = (data) => {
   // Greeting with name
   heroName.textContent = `Hi, I'm ${data.name}.`;
 
-  heroSummary.textContent = `Based in New York, NY, I'm looking to further my skillset as a software developer through personal projects while also looking for a fulltime position.`;
+  heroSummary.textContent = `Based in New York City, I'm a Computer Science graduate from Manhattan University with a passion for cybersecurity, full-stack development, and building impactful applications.`;
 
   heroLinks.innerHTML = '';
   const contactLinks = [
@@ -489,15 +489,7 @@ const renderProjects = (projects = [], contact = {}, repoMap = {}) => {
 
     // Website button for specific projects
     const projectNameLower = (project.name || '').toLowerCase();
-    if (projectNameLower.includes('q-quake') || projectNameLower.includes('qquake')) {
-      const websiteButton = document.createElement('a');
-      websiteButton.className = 'btn btn--primary btn--small btn--with-icon';
-      websiteButton.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Hackathon`;
-      websiteButton.href = 'https://hackathon.nyuad.nyu.edu/year/2025/';
-      websiteButton.target = '_blank';
-      websiteButton.rel = 'noopener noreferrer';
-      actions.appendChild(websiteButton);
-    } else if (projectNameLower.includes('portfolio')) {
+    if (projectNameLower.includes('portfolio')) {
       const websiteButton = document.createElement('button');
       websiteButton.className = 'btn btn--primary btn--small btn--with-icon';
       websiteButton.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> You're here!`;
@@ -1206,7 +1198,7 @@ const renderSkills = (skills = {}) => {
  */
 const hydrateSite = async () => {
   try {
-    const response = await fetch(DATA_PATH);
+    const response = await fetch(`${DATA_PATH}?v=${Date.now()}`);
     const data = await response.json();
     resumeData = data;
 
@@ -1221,7 +1213,7 @@ const hydrateSite = async () => {
     console.error('Unable to load resume.json', error);
     // Show fallback UI
     const hero = document.getElementById('hero-name');
-    if (hero) hero.textContent = 'Adonis Garcia';
+    if (hero) hero.textContent = 'Joseph Decossard';
     const summary = document.getElementById('hero-summary');
     if (summary) summary.textContent = 'Portfolio content is loading. Please refresh the page.';
   }

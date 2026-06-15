@@ -3,70 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GLASS Honors Program | Adonis Garcia</title>
-    <meta name="description" content="Adonis Garcia's GLASS Honors Program portfolio - Global Leaders and Scholars in STEM at NYU Tandon" />
-    <meta property="og:title" content="GLASS Honors Program | Adonis Garcia" />
-    <meta property="og:description" content="GLASS Honors Program portfolio - Global Leaders and Scholars in STEM at NYU Tandon" />
+    <title>Cybersecurity Lab | Joseph Decossard</title>
+    <meta name="description" content="Joseph Decossard's cybersecurity portfolio — projects, certifications, and security research at Manhattan University." />
+    <meta property="og:title" content="Cybersecurity Lab | Joseph Decossard" />
+    <meta property="og:description" content="Cybersecurity portfolio — projects, certifications, and security research." />
     <meta property="og:type" content="website" />
-    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <script>
-      window.tailwind = window.tailwind || {};
-      window.tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              charcoal: '#0a0810',
-              surface: '#141422',
-              violet: '#57068c',
-              purple: '#8900e1',
-              lavender: '#a855f7',
-              cream: '#f0e8ff',
-              gold: '#f5a623',
-            },
-            fontFamily: {
-              sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
-              mono: ['"JetBrains Mono"', 'monospace'],
-            },
-          },
-        },
-        corePlugins: {
-          preflight: true,
-        },
-      };
-    </script>
-    <script src="https://cdn.tailwindcss.com" defer></script>
-    <script src="https://unpkg.com/lucide@0.469.0"></script>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="cyber.css" />
+    <script src="https://unpkg.com/lucide@0.469.0"></script>
   </head>
-  <body class="glass-theme">
+  <body class="cyber-theme">
     <!-- Scroll Progress Bar -->
-    <div class="glass-progress" id="scroll-progress"></div>
-    
+    <div class="cyber-progress" id="scroll-progress"></div>
+
     <!-- Background Canvas -->
     <canvas id="bg-canvas" aria-hidden="true"></canvas>
-    
+
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
     <div class="page-shell">
       <div class="site-header-gradient"></div>
-      
+
       <!-- Header Navigation -->
       <header class="site-header" data-animate="fade">
-        <div class="brand">AG</div>
+        <div class="brand">JD</div>
         <nav class="primary-nav" aria-label="Primary">
-          <a href="#glass-about">About</a>
-          <a href="#glass-program">Program</a>
-          <a href="#glass-windows">5 Windows</a>
-          <a href="#glass-journey">Journey</a>
-          <a href="#glass-project">Project</a>
+          <a href="#cyber-about">About</a>
+          <a href="#cyber-skills">Arsenal</a>
+          <a href="#cyber-projects">Projects</a>
+          <a href="#cyber-labs">Labs</a>
+          <a href="#cyber-certs">Certifications</a>
           <a href="index.html" class="primary-nav__portfolio" data-nav-portfolio>Portfolio</a>
         </nav>
         <div class="header-actions">
-          <a class="nav-cta nav-cta--desktop" href="#glass-contact">Contact</a>
+          <a class="nav-cta nav-cta--desktop" href="#cyber-contact">Contact</a>
           <button class="menu-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation">
             <span></span>
             <span></span>
@@ -74,731 +52,519 @@
           </button>
         </div>
       </header>
-      
+
       <!-- Mobile Navigation -->
       <div id="mobile-nav-overlay" class="mobile-nav-overlay" aria-hidden="true"></div>
       <div id="mobile-nav-sheet" class="mobile-nav-sheet" aria-modal="true" aria-hidden="true" role="dialog">
         <div class="mobile-nav-content">
           <nav aria-label="Mobile Primary">
             <a href="index.html" data-mobile-nav-link>← Main Portfolio</a>
-            <a href="#glass-hero" data-mobile-nav-link>Introduction</a>
-            <a href="#glass-about" data-mobile-nav-link>About & Mission</a>
-            <a href="#glass-windows" data-mobile-nav-link>5 Windows</a>
-            <a href="#glass-journey" data-mobile-nav-link>My Journey</a>
-            <a href="#glass-project" data-mobile-nav-link>Senior Project</a>
-            <a href="#glass-deliverables" data-mobile-nav-link>Deliverables</a>
+            <a href="#cyber-hero" data-mobile-nav-link>Introduction</a>
+            <a href="#cyber-about" data-mobile-nav-link>About</a>
+            <a href="#cyber-skills" data-mobile-nav-link>Arsenal</a>
+            <a href="#cyber-projects" data-mobile-nav-link>Projects</a>
+            <a href="#cyber-labs" data-mobile-nav-link>Labs</a>
+            <a href="#cyber-certs" data-mobile-nav-link>Certifications</a>
           </nav>
-          <a class="nav-cta" href="#glass-contact" data-mobile-nav-link>Contact</a>
+          <a class="nav-cta" href="#cyber-contact" data-mobile-nav-link>Contact</a>
         </div>
       </div>
 
-      <main class="glass-main">
-        
+      <main class="cyber-main">
+
         <!-- ============================================
-             SECTION 1: HERO / INTRODUCTION (REDESIGNED)
+             SECTION 1: HERO
              ============================================ -->
-        <section class="hero glass-hero glass-hero--compact" id="glass-hero" data-animate="fade">
+        <section class="hero cyber-hero" id="cyber-hero" data-animate="fade">
           <!-- Breadcrumb -->
-          <div class="glass-breadcrumb" style="grid-column: 1 / -1;">
+          <div class="cyber-breadcrumb" style="grid-column: 1 / -1;">
             <a href="index.html">Portfolio</a>
             <span>/</span>
-            <span>GLASS Honors Program</span>
+            <span>Cybersecurity Lab</span>
           </div>
-          
+
           <div class="hero__copy">
-            <p class="eyebrow">> glass_scholar --status active</p>
-            <h1 id="glass-hero-title">Building AI tools to bridge the global education gap.</h1>
-            <p class="hero__summary" id="glass-hero-summary">
-              Fourth-year Computer Science student at NYU Tandon, GLASS Scholar since 2023. 
-              Through leadership, global experiences, and technical innovation, I'm working to 
-              democratize quality education worldwide.
+            <p class="eyebrow">> security_researcher --status active</p>
+            <h1 id="cyber-hero-title">Securing systems.<br>Breaking assumptions.</h1>
+            <p class="hero__summary" id="cyber-hero-summary">
+              Computer Science graduate from Manhattan University with a focus on cybersecurity,
+              network defense, and secure application development. Trilingual professional
+              protecting critical infrastructure.
             </p>
           </div>
-          
-          <!-- Stats & Actions moved to right side -->
-          <div class="glass-hero__sidebar">
-            <div class="glass-stats glass-stats--grid">
-              <div class="glass-stat">
-                <span class="glass-stat__value">3</span>
-                <span class="glass-stat__label">Years in GLASS</span>
+
+          <div class="cyber-hero__sidebar">
+            <div class="cyber-terminal-widget">
+              <div class="cyber-terminal-header">
+                <span class="cyber-terminal-dot cyber-terminal-dot--red"></span>
+                <span class="cyber-terminal-dot cyber-terminal-dot--yellow"></span>
+                <span class="cyber-terminal-dot cyber-terminal-dot--green"></span>
+                <span class="cyber-terminal-title">jd@kali:~$</span>
               </div>
-              <div class="glass-stat">
-                <span class="glass-stat__value">12</span>
-                <span class="glass-stat__label">Countries Visited</span>
-              </div>
-              <div class="glass-stat">
-                <span class="glass-stat__value">4.0</span>
-                <span class="glass-stat__label glass-stat__label--gpa">Cumulative GPA</span>
-              </div>
-              <div class="glass-stat">
-                <span class="glass-stat__value">300+</span>
-                <span class="glass-stat__label">Students Impacted</span>
-              </div>
-              <div class="glass-stat">
-                <span class="glass-stat__value">9</span>
-                <span class="glass-stat__label">Leadership Roles</span>
-              </div>
-              <div class="glass-stat">
-                <span class="glass-stat__value">7</span>
-                <span class="glass-stat__label">Awards Received</span>
+              <div class="cyber-terminal-body" id="cyber-terminal">
+                <div class="cyber-terminal-line">
+                  <span class="cyber-prompt">$</span>
+                  <span class="cyber-cmd" id="cyber-type-cmd"></span>
+                  <span class="cyber-cursor">_</span>
+                </div>
               </div>
             </div>
-            
+
             <div class="hero__actions hero__actions--vertical">
-              <a class="btn btn--primary" href="#glass-project">View Senior Project</a>
-              <a class="btn btn--ghost" href="#glass-windows">Explore 5 Windows</a>
+              <a class="btn btn--primary" href="#cyber-projects">View Projects</a>
+              <a class="btn btn--ghost" href="#cyber-skills">Explore Arsenal</a>
             </div>
           </div>
         </section>
 
         <!-- ============================================
-             SECTION 2: ABOUT / MISSION
+             SECTION 2: ABOUT / FOCUS AREAS
              ============================================ -->
-        <section class="glass-section" id="glass-about" data-animate="fade">
+        <section class="cyber-section" id="cyber-about" data-animate="fade">
           <div class="section-heading">
             <p class="eyebrow">// about</p>
-            <h2>My Story & Mission</h2>
+            <h2>Security Mindset</h2>
           </div>
-          
-          <div class="glass-about">
-            <div class="glass-about__content">
-              <p class="glass-about__text">
-                Growing up as a first-generation student, I experienced firsthand how access to quality education can transform lives—and how its absence can limit potential. This understanding has driven every decision in my academic journey.
-              </p>
-              <p class="glass-about__text">
-                Through GLASS, I've channeled this passion into meaningful action: from guiding first-year engineering students as a Teaching Assistant, to founding mentorship programs that support underrepresented students in tech, to immersing myself in global perspectives through study abroad experiences in Abu Dhabi and Seoul.
-              </p>
-              <p class="glass-about__text">
-                Each experience has reinforced my belief that technology—particularly AI and machine learning—can be powerful equalizers. My mission is to build tools that adapt to how different students learn, breaking down barriers of geography, language, and cultural context. I want to create a world where your zip code doesn't determine your access to quality education.
-              </p>
-              
-              <!-- Philosophy Quote -->
-              <div class="glass-quote">
-                <p>
-                  "AI and machine learning are powerful tools to bridge global educational gaps. My mission is to create a world where quality education is accessible to all, regardless of geography or background."
-                </p>
+
+          <div class="cyber-about-grid">
+            <div class="cyber-about-card">
+              <div class="cyber-about-card__icon">
+                <i data-lucide="shield-check"></i>
               </div>
-              
-              <!-- GLASS Profile Link -->
-              <a class="btn btn--primary btn--with-icon" href="https://engineering.nyu.edu/student/adonis-garcia" target="_blank" rel="noopener">
-                <i data-lucide="external-link"></i>
-                View My GLASS Profile
-              </a>
+              <h3>Network Defense</h3>
+              <p>Proficient in network monitoring with Wireshark, firewall configuration, and intrusion detection systems. Understanding how traffic flows to identify and stop threats before they escalate.</p>
             </div>
-            
-            <div class="glass-about__image">
-              <img src="assets/about-portrait.JPG" alt="Childhood photo of Adonis" class="glass-about__img" loading="lazy" />
+
+            <div class="cyber-about-card">
+              <div class="cyber-about-card__icon">
+                <i data-lucide="lock"></i>
+              </div>
+              <h3>Authentication & Access Control</h3>
+              <p>Built production OAuth 2.0 authentication systems with MFA, Firebase integration, and secure session management. Protecting user identity at every entry point.</p>
             </div>
+
+            <div class="cyber-about-card">
+              <div class="cyber-about-card__icon">
+                <i data-lucide="terminal"></i>
+              </div>
+              <h3>Operating System Security</h3>
+              <p>Deep understanding of Linux kernel security, OS hardening, and administration. Experienced with Seed Labs for hands-on exploitation and defense exercises.</p>
+            </div>
+
+            <div class="cyber-about-card">
+              <div class="cyber-about-card__icon">
+                <i data-lucide="code"></i>
+              </div>
+              <h3>Secure Development</h3>
+              <p>Writing secure code from the start — input validation, encrypted communications, and defense-in-depth principles applied across Python, JavaScript, and C++ applications.</p>
+            </div>
+          </div>
+
+          <!-- Philosophy Quote -->
+          <div class="cyber-quote">
+            <p>
+              "Security isn't just about building walls — it's about understanding how they're
+              breached and making them stronger every time."
+            </p>
           </div>
         </section>
 
         <!-- ============================================
-             SECTION 3: WHAT IS GLASS? (CREATIVE REDESIGN)
+             SECTION 3: SECURITY ARSENAL
              ============================================ -->
-        <section class="glass-section" id="glass-program" data-animate="fade">
+        <section class="cyber-section" id="cyber-skills" data-animate="fade">
           <div class="section-heading">
-            <p class="eyebrow">// program</p>
-            <h2>What is GLASS?</h2>
+            <p class="eyebrow">// arsenal</p>
+            <h2>Security Toolkit</h2>
           </div>
-          
-          <div class="glass-program-showcase">
-            <!-- Main Definition Card -->
-            <div class="glass-program-hero">
-              <div class="glass-program-hero__badge">
-                <span class="glass-program-acronym">G</span>
-                <span class="glass-program-acronym">L</span>
-                <span class="glass-program-acronym">A</span>
-                <span class="glass-program-acronym">S</span>
-                <span class="glass-program-acronym">S</span>
-              </div>
-              <div class="glass-program-hero__content">
-                <h3 class="glass-program-hero__title">Global Leaders and Scholars in STEM</h3>
-                <p class="glass-program-hero__subtitle">NYU Tandon's Premier Honors Program</p>
-              </div>
-              <a class="btn btn--glass-website-inside" href="https://engineering.nyu.edu/academics/support-services/undergraduate/glass" target="_blank" rel="noopener">
-                <i data-lucide="external-link"></i>
-                Visit Website
-              </a>
-            </div>
-            
-            <!-- GLASS Photo Gallery -->
-            <div class="glass-gallery">
-              <div class="glass-gallery__track">
-                <div class="glass-gallery__slide">
-                  <img src="assets/glass-gallery-1.jpeg" alt="GLASS scholars at a group event" loading="lazy" />
-                </div>
-                <div class="glass-gallery__slide">
-                  <img src="assets/glass-gallery-2.jpeg" alt="GLASS program campus gathering" loading="lazy" />
-                </div>
-                <div class="glass-gallery__slide">
-                  <img src="assets/glass-gallery-3.jpeg" alt="GLASS scholars collaborating on a project" loading="lazy" />
-                </div>
-                <div class="glass-gallery__slide">
-                  <img src="assets/glass-gallery-4.jpg" alt="GLASS community celebration" loading="lazy" />
-                </div>
-                <div class="glass-gallery__slide">
-                  <img src="assets/glass-gallery-5.jpg" alt="GLASS study abroad group photo" loading="lazy" />
-                </div>
-                <div class="glass-gallery__slide">
-                  <img src="assets/glass-gallery-6.jpg" alt="GLASS honors program ceremony" loading="lazy" />
-                </div>
-                <div class="glass-gallery__slide">
-                  <img src="assets/glass-gallery-7.JPG" alt="GLASS scholars at an international event" loading="lazy" />
-                </div>
-                <div class="glass-gallery__slide">
-                  <img src="assets/glass-gallery-8.JPG" alt="GLASS team building activity" loading="lazy" />
-                </div>
-                <div class="glass-gallery__slide">
-                  <img src="assets/glass-gallery-9.jpeg" alt="GLASS global leadership workshop" loading="lazy" />
-                </div>
-                <div class="glass-gallery__slide">
-                  <img src="assets/glass-gallery-10.jpg" alt="GLASS scholars networking event" loading="lazy" />
-                </div>
-                <div class="glass-gallery__slide">
-                  <img src="assets/glass-gallery-11.jpeg" alt="GLASS program group at NYU Tandon" loading="lazy" />
-                </div>
+
+          <div class="cyber-arsenal">
+            <!-- Languages -->
+            <div class="cyber-arsenal-group" data-category="LANGUAGES">
+              <h3>Languages</h3>
+              <div class="cyber-arsenal-tags">
+                <span class="cyber-tag cyber-tag--lang">Python</span>
+                <span class="cyber-tag cyber-tag--lang">JavaScript</span>
+                <span class="cyber-tag cyber-tag--lang">TypeScript</span>
+                <span class="cyber-tag cyber-tag--lang">C++</span>
+                <span class="cyber-tag cyber-tag--lang">SQL</span>
+                <span class="cyber-tag cyber-tag--lang">Bash</span>
+                <span class="cyber-tag cyber-tag--lang">Java</span>
+                <span class="cyber-tag cyber-tag--lang">HTML/CSS</span>
               </div>
             </div>
-            
-            <!-- Feature Grid -->
-            <div class="glass-program-features">
-              <div class="glass-program-feature">
-                <div class="glass-program-feature__icon">
-                  <i data-lucide="globe"></i>
-                </div>
-                <h4>Global Opportunities</h4>
-                <p>Study abroad funding and international experiences</p>
+
+            <!-- Security Tools -->
+            <div class="cyber-arsenal-group" data-category="SECURITY_TOOLS">
+              <h3>Security & Infrastructure</h3>
+              <div class="cyber-arsenal-tags">
+                <span class="cyber-tag cyber-tag--tool cyber-tag--highlight">Wireshark</span>
+                <span class="cyber-tag cyber-tag--tool cyber-tag--highlight">Seed Lab</span>
+                <span class="cyber-tag cyber-tag--tool">Linux (Kernel/OS)</span>
+                <span class="cyber-tag cyber-tag--tool">Firebase Auth</span>
+                <span class="cyber-tag cyber-tag--tool">Docker</span>
+                <span class="cyber-tag cyber-tag--tool">Azure DevOps</span>
+                <span class="cyber-tag cyber-tag--tool">Git / GitHub / GitLab</span>
+                <span class="cyber-tag cyber-tag--tool">REST APIs</span>
+                <span class="cyber-tag cyber-tag--tool">Hardware/IT</span>
               </div>
-              <div class="glass-program-feature">
-                <div class="glass-program-feature__icon">
-                  <i data-lucide="coins"></i>
-                </div>
-                <h4>Financial Support</h4>
-                <p>Conferences, development, and research funding</p>
+            </div>
+
+            <!-- AI / ML -->
+            <div class="cyber-arsenal-group" data-category="ML_AI">
+              <h3>ML / AI</h3>
+              <div class="cyber-arsenal-tags">
+                <span class="cyber-tag cyber-tag--ai">Qdrant</span>
+                <span class="cyber-tag cyber-tag--ai">Pinecone</span>
+                <span class="cyber-tag cyber-tag--ai">HuggingFace</span>
+                <span class="cyber-tag cyber-tag--ai">RAG</span>
+                <span class="cyber-tag cyber-tag--ai">LangChain</span>
+                <span class="cyber-tag cyber-tag--ai">Prompt Engineering</span>
+                <span class="cyber-tag cyber-tag--ai">Semantic Search</span>
+                <span class="cyber-tag cyber-tag--ai">Lightning.ai</span>
               </div>
-              <div class="glass-program-feature">
-                <div class="glass-program-feature__icon">
-                  <i data-lucide="users"></i>
-                </div>
-                <h4>Tight-Knit Community</h4>
-                <p>Family of driven students pushing each other higher</p>
-              </div>
-              <div class="glass-program-feature">
-                <div class="glass-program-feature__icon">
-                  <i data-lucide="rocket"></i>
-                </div>
-                <h4>Career Launch</h4>
-                <p>Transforming engineers into global changemakers</p>
+            </div>
+
+            <!-- Frameworks -->
+            <div class="cyber-arsenal-group" data-category="FRAMEWORKS">
+              <h3>Frameworks & Platforms</h3>
+              <div class="cyber-arsenal-tags">
+                <span class="cyber-tag cyber-tag--fw">Node.js</span>
+                <span class="cyber-tag cyber-tag--fw">Express.js</span>
+                <span class="cyber-tag cyber-tag--fw">Passport.js</span>
+                <span class="cyber-tag cyber-tag--fw">SQLite</span>
+                <span class="cyber-tag cyber-tag--fw">Vercel</span>
+                <span class="cyber-tag cyber-tag--fw">MacOS</span>
               </div>
             </div>
           </div>
         </section>
 
         <!-- ============================================
-             SECTION 4: THE 5 WINDOWS FRAMEWORK (OPTIMIZED)
+             SECTION 4: SECURITY PROJECTS
              ============================================ -->
-        <section class="glass-section glass-windows" id="glass-windows" data-animate="fade">
+        <section class="cyber-section" id="cyber-projects" data-animate="fade">
           <div class="section-heading">
-            <p class="eyebrow">// framework</p>
-            <h2>The 5 Windows of Growth</h2>
-          </div>
-          
-          <!-- Windows Navigation -->
-          <nav class="glass-windows__nav" role="tablist" aria-label="5 Windows Navigation">
-            <button class="glass-window-btn active" role="tab" data-window="leadership" aria-selected="true" aria-controls="panel-leadership">
-              <span class="glass-window-btn__icon"><i data-lucide="crown"></i></span>
-              <span class="glass-window-btn__label">Leadership</span>
-            </button>
-            <button class="glass-window-btn" role="tab" data-window="global" aria-selected="false" aria-controls="panel-global">
-              <span class="glass-window-btn__icon"><i data-lucide="globe"></i></span>
-              <span class="glass-window-btn__label">Global</span>
-            </button>
-            <button class="glass-window-btn" role="tab" data-window="academic" aria-selected="false" aria-controls="panel-academic">
-              <span class="glass-window-btn__icon"><i data-lucide="award"></i></span>
-              <span class="glass-window-btn__label">Academic</span>
-            </button>
-            <button class="glass-window-btn" role="tab" data-window="service" aria-selected="false" aria-controls="panel-service">
-              <span class="glass-window-btn__icon"><i data-lucide="heart-handshake"></i></span>
-              <span class="glass-window-btn__label">Service</span>
-            </button>
-            <button class="glass-window-btn" role="tab" data-window="professional" aria-selected="false" aria-controls="panel-professional">
-              <span class="glass-window-btn__icon"><i data-lucide="briefcase"></i></span>
-              <span class="glass-window-btn__label">Professional</span>
-            </button>
-          </nav>
-          
-          <!-- Windows Content Panels -->
-          <div class="glass-windows__panels">
-            <!-- Leadership Panel -->
-            <div class="glass-window-panel active" id="panel-leadership" role="tabpanel" aria-labelledby="tab-leadership">
-              <div class="glass-card-grid glass-card-grid--compact">
-                <article class="glass-card glass-card--compact">
-                  <div class="glass-card__image">
-                    <img src="assets/leadership-ta.jpg" alt="Teaching Assistant experience" class="glass-card__img" loading="lazy" />
-                  </div>
-                  <div class="glass-card__content">
-                    <span class="glass-card__window-badge"><i data-lucide="crown"></i> Leadership</span>
-                    <h3>Teaching Assistant & Mentor</h3>
-                    <p class="glass-card__meta">General Engineering Department • NYU Tandon • 2023-2024</p>
-                    <p>Guided first-year students through engineering fundamentals, gaining insights into learning challenges that now inform my educational technology work.</p>
-                  </div>
-                </article>
-                
-                <article class="glass-card glass-card--compact">
-                  <div class="glass-card__image">
-                    <img src="assets/leadership-csi.jpeg" alt="CS Initiative Committee Chair" class="glass-card__img" loading="lazy" />
-                  </div>
-                  <div class="glass-card__content">
-                    <span class="glass-card__window-badge"><i data-lucide="crown"></i> Leadership</span>
-                    <h3>CS Initiative Committee Chair</h3>
-                    <p class="glass-card__meta">NYU Academic Achievement Program • 2024-2025</p>
-                    <p>Led efforts to increase representation for underrepresented students in CS, creating spaces where students could see themselves succeeding in tech.</p>
-                  </div>
-                </article>
-              </div>
-            </div>
-            
-            <!-- Global Panel -->
-            <div class="glass-window-panel" id="panel-global" role="tabpanel" aria-labelledby="tab-global">
-              <div class="glass-card-grid glass-card-grid--compact">
-                <article class="glass-card glass-card--compact">
-                  <div class="glass-card__image">
-                    <img src="assets/global-abudhabi.jpg" alt="NYU Abu Dhabi campus" class="glass-card__img" loading="lazy" />
-                  </div>
-                  <div class="glass-card__content">
-                    <span class="glass-card__window-badge"><i data-lucide="globe"></i> Global Competency</span>
-                    <h3>NYU Abu Dhabi</h3>
-                    <p class="glass-card__meta">Spring 2024 & Spring 2025 • Abu Dhabi, UAE</p>
-                    <p>Two semesters immersed in Middle Eastern culture while studying AI. Transformed how I think about building culturally-aware technology.</p>
-                  </div>
-                </article>
-                
-                <article class="glass-card glass-card--compact">
-                  <div class="glass-card__image">
-                    <img src="assets/global-seoul.jpg" alt="Seoul SDG course experience" class="glass-card__img" loading="lazy" />
-                  </div>
-                  <div class="glass-card__content">
-                    <span class="glass-card__window-badge"><i data-lucide="globe"></i> Global Competency</span>
-                    <h3>SDG Course in Seoul</h3>
-                    <p class="glass-card__meta">Winter 2025 • Hanyang University, Seoul, Korea</p>
-                    <p>Three weeks studying how South Korea balances tech advancement with sustainability. Learned to implement solutions across cultural boundaries.</p>
-                  </div>
-                </article>
-              </div>
-            </div>
-            
-            <!-- Academic Panel -->
-            <div class="glass-window-panel" id="panel-academic" role="tabpanel" aria-labelledby="tab-academic">
-              <div class="glass-card-grid glass-card-grid--compact">
-                <article class="glass-card glass-card--compact">
-                  <div class="glass-card__image">
-                    <img src="assets/academic-hackathon.jpg" alt="NYUAD Hackathon experience" class="glass-card__img" loading="lazy" />
-                  </div>
-                  <div class="glass-card__content">
-                    <span class="glass-card__window-badge"><i data-lucide="award"></i> Academic Excellence</span>
-                    <h3>NYUAD Hackathon for Social Good</h3>
-                    <p class="glass-card__meta">72 Hours • Spring 2025 • 2nd Place + Audience Choice</p>
-                    <p>Built Q-quake—an earthquake detection system using quantum computing. Three intense days proving breakthrough solutions come from diverse perspectives.</p>
-                  </div>
-                </article>
-                
-                <article class="glass-card glass-card--compact">
-                  <div class="glass-card__image">
-                    <img src="assets/academic-gca.jpg" alt="Global Career Accelerator program" class="glass-card__img" loading="lazy" />
-                  </div>
-                  <div class="glass-card__content">
-                    <span class="glass-card__window-badge"><i data-lucide="award"></i> Academic Excellence</span>
-                    <h3>Global Career Accelerator</h3>
-                    <p class="glass-card__meta">10 Weeks • Summer 2025 • charity: water, Intel</p>
-                    <p>Built real projects for global organizations while developing intercultural skills. Learned to translate technical solutions across cultures.</p>
-                  </div>
-                </article>
-              </div>
-            </div>
-            
-            <!-- Service Panel (with TBD slot) -->
-            <div class="glass-window-panel" id="panel-service" role="tabpanel" aria-labelledby="tab-service">
-              <div class="glass-card-grid glass-card-grid--compact">
-                <article class="glass-card glass-card--compact">
-                  <div class="glass-card__image">
-                    <img src="assets/service-srilanka.jpg" alt="Sri Lanka service trip" class="glass-card__img" loading="lazy" />
-                  </div>
-                  <div class="glass-card__content">
-                    <span class="glass-card__window-badge"><i data-lucide="heart-handshake"></i> Service</span>
-                    <h3>Conservation & Community Work</h3>
-                    <p class="glass-card__meta">Two Weeks • Summer 2024 • Galle, Sri Lanka</p>
-                    <p>Mangrove restoration, turtle conservation, and rural school support. Saw firsthand how education is key to addressing environmental and social challenges.</p>
-                  </div>
-                </article>
-                
-                <!-- TBD Card -->
-                <article class="glass-card glass-card--compact glass-card--tbd">
-                  <div class="glass-card__image">
-                    <div class="glass-image-placeholder glass-image-placeholder--tbd" data-image="service-tbd">
-                      <span class="glass-image-placeholder__text">Coming Soon</span>
-                    </div>
-                  </div>
-                  <div class="glass-card__content">
-                    <span class="glass-card__window-badge"><i data-lucide="heart-handshake"></i> Service</span>
-                    <h3>Future Service Initiative</h3>
-                    <p class="glass-card__meta">TBD</p>
-                    <p>Additional service experience to be added as my GLASS journey continues.</p>
-                  </div>
-                </article>
-              </div>
-            </div>
-            
-            <!-- Professional Panel -->
-            <div class="glass-window-panel" id="panel-professional" role="tabpanel" aria-labelledby="tab-professional">
-              <div class="glass-card-grid glass-card-grid--compact">
-                <article class="glass-card glass-card--compact">
-                  <div class="glass-card__image">
-                    <img src="assets/professional-polydelta.jpg" alt="Polydelta AI internship" class="glass-card__img" loading="lazy" />
-                  </div>
-                  <div class="glass-card__content">
-                    <span class="glass-card__window-badge"><i data-lucide="briefcase"></i> Professional</span>
-                    <h3>Machine Learning Software Engineer Intern</h3>
-                    <p class="glass-card__meta">Polydelta AI (MissionML) • Arlington, VA • Summer 2024</p>
-                    <p>Built AI-powered solutions for government applications. Developed scalable ML pipelines and gained experience in responsible AI development.</p>
-                  </div>
-                </article>
-                
-                <article class="glass-card glass-card--compact">
-                  <div class="glass-card__image">
-                    <img src="assets/professional-shpe.jpg" alt="SHPE professional development" class="glass-card__img" loading="lazy" />
-                  </div>
-                  <div class="glass-card__content">
-                    <span class="glass-card__window-badge"><i data-lucide="briefcase"></i> Professional</span>
-                    <h3>SHPE National Conference</h3>
-                    <p class="glass-card__meta">51th Annual Conference • Philadelphia, PA • October 2025</p>
-                    <p>Networked with professionals pioneering AI and ML. Saw Hispanic engineers thriving in tech—proof there's space for me in this field.</p>
-                  </div>
-            </article>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ============================================
-             SECTION 5: JOURNEY TIMELINE (ONE YEAR AT A TIME)
-             ============================================ -->
-        <section class="glass-section" id="glass-journey" data-animate="fade">
-          <div class="section-heading">
-            <p class="eyebrow">// timeline</p>
-            <h2>My GLASS Journey</h2>
-          </div>
-          
-          <div class="glass-journey-carousel">
-            <!-- Navigation -->
-            <div class="glass-journey-nav">
-              <button class="glass-journey-btn glass-journey-btn--prev" id="journey-prev" aria-label="Previous year" disabled>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M15 18l-6-6 6-6"/>
-                </svg>
-              </button>
-              <div class="glass-journey-indicator">
-                <span class="glass-journey-current" id="journey-current">Year 1</span>
-                <span class="glass-journey-total">of 4</span>
-              </div>
-              <button class="glass-journey-btn glass-journey-btn--next" id="journey-next" aria-label="Next year">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M9 18l6-6-6-6"/>
-                </svg>
-              </button>
-            </div>
-            
-            <!-- Year Slides -->
-            <div class="glass-journey-slides" id="journey-slides">
-              <!-- Year 1 -->
-              <div class="glass-journey-slide active" data-year="1">
-                <div class="glass-journey-slide__header">
-                  <span class="glass-journey-slide__year">Year 1</span>
-                  <span class="glass-journey-slide__dates">2022-2023</span>
-                </div>
-                <div class="glass-journey-slide__content">
-                  <h3>Foundation & Early Recognition</h3>
-                  <ul class="glass-journey-list">
-                    <li>Began foundational coursework in Computer Science and Mathematics</li>
-                    <li>Won NYU Outstanding Innovator Award and Gunter Georgi Award for engineering projects</li>
-                    <li>Applied to GLASS Honors Program</li>
-                    <li>Named NYU AAP Scholar of the Year (Spring 2023)</li>
-                    <li>Served as Summer Peer Leader for NYU HEOP first-year program</li>
-                  </ul>
-                </div>
-                <div class="glass-journey-slide__image">
-                  <img src="assets/year-1.jpg" alt="Year 1 highlights" class="glass-journey-slide__img" loading="lazy" />
-                </div>
-              </div>
-              
-              <!-- Year 2 -->
-              <div class="glass-journey-slide" data-year="2">
-                <div class="glass-journey-slide__header">
-                  <span class="glass-journey-slide__year">Year 2</span>
-                  <span class="glass-journey-slide__dates">2023-2024</span>
-                </div>
-                <div class="glass-journey-slide__content">
-                  <h3>Leadership & Global Expansion</h3>
-                  <ul class="glass-journey-list">
-                    <li>Officially accepted into GLASS Honors Program</li>
-                    <li>Became Teaching Assistant for first-year engineering students</li>
-                    <li>Founded mentorship initiatives and joined executive boards</li>
-                    <li>Named NYU AAP Sophomore of the Year 2023</li>
-                    <li>First study abroad at NYU Abu Dhabi (Spring 2024)</li>
-                    <li>Polydelta AI internship, Institute for Responsible Citizenship fellowship</li>
-                    <li>Two week service trip in Galle, Sri Lanka</li>
-                  </ul>
-                </div>
-                <div class="glass-journey-slide__image">
-                  <img src="assets/year-2.jpg" alt="Year 2 highlights" class="glass-journey-slide__img" loading="lazy" />
-                </div>
-              </div>
-              
-              <!-- Year 3 -->
-              <div class="glass-journey-slide" data-year="3">
-                <div class="glass-journey-slide__header">
-                  <span class="glass-journey-slide__year">Year 3</span>
-                  <span class="glass-journey-slide__dates">2024-2025</span>
-                </div>
-                <div class="glass-journey-slide__content">
-                  <h3>Impact & Achievement</h3>
-                  <ul class="glass-journey-list">
-                    <li>Continued leadership in campus initiatives and executive positions</li>
-                    <li>Served as GLASS Program Recruiter</li>
-                    <li>Completed SDG course at Hanyang University, Seoul, Korea</li>
-                    <li>Returned to NYU Abu Dhabi (Spring 2025), became NYUAD Ambassador</li>
-                    <li>Won 2nd Place at NYUAD Hackathon for Social Good</li>
-                    <li>Bank of America internship in Charlotte, NC</li>
-                    <li>Selected as Google SWEP Fellow (Spring 2025)</li>
-                  </ul>
-                </div>
-                <div class="glass-journey-slide__image">
-                  <img src="assets/year-3.jpeg" alt="Year 3 highlights" class="glass-journey-slide__img" loading="lazy" />
-                </div>
-              </div>
-              
-              <!-- Year 4 -->
-              <div class="glass-journey-slide" data-year="4">
-                <div class="glass-journey-slide__header">
-                  <span class="glass-journey-slide__year">Year 4</span>
-                  <span class="glass-journey-slide__dates">2025-2026</span>
-                  <span class="glass-badge glass-badge--in-progress" style="margin-left: 1rem;">
-                    <span class="glass-badge__dot"></span>
-                    Current
-                  </span>
-                </div>
-                <div class="glass-journey-slide__content">
-                  <h3>Culmination & Future</h3>
-                  <ul class="glass-journey-list">
-                    <li>Completed senior GLASS project: AI Tools for Educational Access in CS Education</li>
-                    <li>Working at MissionML as ML Software Engineer</li>
-                    <li>Active involvement across multiple campus organizations</li>
-                    <li>Completed final GLASS deliverables (Abstract & Paper)</li>
-                    <li>Conducting job search for post-graduation opportunities</li>
-                  </ul>
-                </div>
-                <div class="glass-journey-slide__image">
-                  <img src="assets/year-4.jpg" alt="Year 4 highlights" class="glass-journey-slide__img" loading="lazy" />
-                </div>
-              </div>
-            </div>
-            
-            <!-- Dot Indicators -->
-            <div class="glass-journey-dots">
-              <button class="glass-journey-dot active" data-slide="1" aria-label="Go to Year 1"></button>
-              <button class="glass-journey-dot" data-slide="2" aria-label="Go to Year 2"></button>
-              <button class="glass-journey-dot" data-slide="3" aria-label="Go to Year 3"></button>
-              <button class="glass-journey-dot" data-slide="4" aria-label="Go to Year 4"></button>
-            </div>
-          </div>
-        </section>
-
-        <!-- ============================================
-             SECTION 6: SENIOR GLASS PROJECT (SDG REPOSITIONED)
-             ============================================ -->
-        <section class="glass-section" id="glass-project" data-animate="fade">
-          <div class="section-heading">
-            <p class="eyebrow">// senior_project</p>
-            <h2>AI Tools for Educational Access</h2>
-          </div>
-          
-          <div class="glass-project-featured">
-            <div class="glass-project-header">
-              <div>
-                <span class="glass-badge glass-badge--complete">
-                  <span class="glass-badge__dot"></span>
-                  Complete
-                </span>
-                <h3 class="glass-project-title" style="margin-top: 1rem;">
-                  Building AI-Powered Educational<br>Tools That Adapt to the Student
-                </h3>
-              </div>
-              
-              <!-- UN SDG Logos (no container box) -->
-              <div class="glass-sdg-logos-only">
-                <div class="glass-sdg-logo" title="SDG 4: Quality Education">
-                  <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-04.jpg" alt="SDG 4: Quality Education" loading="lazy" />
-                </div>
-                <div class="glass-sdg-logo" title="SDG 9: Industry, Innovation and Infrastructure">
-                  <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-09.jpg" alt="SDG 9: Industry, Innovation and Infrastructure" loading="lazy" />
-                </div>
-                <div class="glass-sdg-logo" title="SDG 10: Reduced Inequalities">
-                  <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-10.jpg" alt="SDG 10: Reduced Inequalities" loading="lazy" />
-                </div>
-              </div>
-            </div>
-            
-            <div class="glass-project-content">
-              <div class="glass-project-mission">
-                <h4>Mission Statement</h4>
-                <p>
-                  I built two AI-powered educational tools that adapt to how different students learn:
-                  a CS Learning Platform that generates personalized code examples tailored to student
-                  interests, and an intelligent Q&A system for NYU's Intro to Engineering course using
-                  retrieval-augmented generation. Both are responsive to cultural contexts, language
-                  barriers, and resource constraints.
-                </p>
-                <p>
-                  These tools demonstrate that technology can democratize education without erasing
-                  cultural identity—recognizing students learn differently based on context, not ability.
-                </p>
-                
-                <!-- NAE Grand Challenge -->
-                <div class="glass-nae-badge">
-                  <i data-lucide="trophy"></i>
-                  <span>NAE Grand Challenge: Advance Personalized Learning</span>
-                </div>
-              </div>
-              
-              <div>
-                <h4 class="glass-research-heading">Research Areas of Excellence</h4>
-                
-                <div class="glass-research-areas">
-                  <div class="glass-research-card">
-                    <div class="glass-research-card__icon"><i data-lucide="bot"></i></div>
-                    <div>
-                      <h5>Data Science / AI / Robotics</h5>
-                      <p>AI that adapts to learning styles and recognizes engagement patterns across backgrounds.</p>
-                    </div>
-                  </div>
-                  
-                  <div class="glass-research-card">
-                    <div class="glass-research-card__icon"><i data-lucide="gamepad-2"></i></div>
-                    <div>
-                      <h5>Emerging Media</h5>
-                      <p>VR labs and AR explanations making immersive learning borderless and accessible.</p>
-                    </div>
-                  </div>
-                  
-                  <div class="glass-research-card">
-                    <div class="glass-research-card__icon"><i data-lucide="radio"></i></div>
-                    <div>
-                      <h5>Communications / IT</h5>
-                      <p>Infrastructure reaching remote areas with stable connections on limited bandwidth.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ============================================
-             SECTION 7: ABSTRACT & FINAL PAPER (MINIMAL)
-             ============================================ -->
-        <section class="glass-section" id="glass-deliverables" data-animate="fade">
-          <div class="section-heading">
-            <p class="eyebrow">// final_paper</p>
-            <h2>GLASS Final Paper</h2>
+            <p class="eyebrow">// projects</p>
+            <h2>Security Projects</h2>
           </div>
 
-          <div class="glass-abstract-block">
-            <div class="glass-paper-download">
-              <div class="glass-paper-download__info">
-                <i data-lucide="file-text"></i>
+          <div class="cyber-projects-grid">
+            <!-- Project 1: OAuth -->
+            <article class="cyber-project-card">
+              <div class="cyber-project-card__header">
+                <div class="cyber-project-card__icon">
+                  <i data-lucide="key-round"></i>
+                </div>
                 <div>
-                  <h4>Building Adaptive Learning: AI Tools for Educational Access in Computer Science Education</h4>
-                  <p class="glass-document-meta">Adonis Garcia — April 1, 2026 — 30 pages</p>
+                  <span class="cyber-project-card__badge">CMPT 369 — Cybersecurity Lab</span>
+                  <h3>Google OAuth 2.0 Authentication Service</h3>
                 </div>
               </div>
-              <div class="glass-paper-download__actions">
-                <a class="btn btn--ghost" href="GLASS_Final_Paper_Complete.pdf" target="_blank" rel="noopener">
-                  <i data-lucide="external-link"></i> View Paper
-                </a>
-                <a class="btn btn--primary" href="GLASS_Final_Paper_Complete.pdf" download>
-                  <i data-lucide="download"></i> Download PDF
-                </a>
+              <div class="cyber-project-card__body">
+                <p>Engineered a standalone OAuth 2.0 verification API with multi-factor authentication and session security — hardening user account protection from the ground up.</p>
+                <ul class="cyber-project-card__highlights">
+                  <li>Built OAuth 2.0 verification API using Express.js and google-auth-library</li>
+                  <li>Integrated Firebase Authentication for MFA step verification</li>
+                  <li>Configured secure routing redirects, session serialization, and backend auth checks</li>
+                  <li>Protected dashboard endpoints with layered security controls</li>
+                </ul>
+                <div class="cyber-project-card__stack">
+                  <span>Node.js</span>
+                  <span>Express</span>
+                  <span>Google Auth</span>
+                  <span>Firebase</span>
+                  <span>Passport.js</span>
+                </div>
               </div>
+              <div class="cyber-project-card__threat-level">
+                <span class="cyber-threat-label">SECURITY LEVEL</span>
+                <div class="cyber-threat-bar">
+                  <div class="cyber-threat-fill" style="--fill-width: 90%"></div>
+                </div>
+                <span class="cyber-threat-value">HIGH</span>
+              </div>
+            </article>
+
+            <!-- Project 2: Turkey.app -->
+            <article class="cyber-project-card">
+              <div class="cyber-project-card__header">
+                <div class="cyber-project-card__icon">
+                  <i data-lucide="database"></i>
+                </div>
+                <div>
+                  <span class="cyber-project-card__badge">CMPT 490 — Capstone</span>
+                  <h3>Turkey.app — Secure Image Platform</h3>
+                </div>
+              </div>
+              <div class="cyber-project-card__body">
+                <p>Full-stack web application for secure image storage, organization, and semantic search — with user authentication, access control, and storage capacity management.</p>
+                <ul class="cyber-project-card__highlights">
+                  <li>Agile/Scrum development in a 4-member team at Manhattan University</li>
+                  <li>Implemented backend auth, storage capacity management, and image import/export</li>
+                  <li>Semantic search powered by Qdrant vector database</li>
+                  <li>Sprint planning, feature delivery, and backlog management</li>
+                </ul>
+                <div class="cyber-project-card__stack">
+                  <span>Python</span>
+                  <span>SQLite</span>
+                  <span>Qdrant</span>
+                  <span>Lightning.ai</span>
+                </div>
+              </div>
+              <div class="cyber-project-card__threat-level">
+                <span class="cyber-threat-label">SECURITY LEVEL</span>
+                <div class="cyber-threat-bar">
+                  <div class="cyber-threat-fill" style="--fill-width: 75%"></div>
+                </div>
+                <span class="cyber-threat-value">MODERATE</span>
+              </div>
+            </article>
+
+            <!-- Project 3: CAT -->
+            <article class="cyber-project-card">
+              <div class="cyber-project-card__header">
+                <div class="cyber-project-card__icon">
+                  <i data-lucide="shield"></i>
+                </div>
+                <div>
+                  <span class="cyber-project-card__badge">CMPT 456 — Software Engineering</span>
+                  <h3>College Application Tracker (CAT)</h3>
+                </div>
+              </div>
+              <div class="cyber-project-card__body">
+                <p>Web application with secure OAuth 2.0 authentication protecting student data — university search, deadline tracking, and automated reminders built with privacy-first design.</p>
+                <ul class="cyber-project-card__highlights">
+                  <li>3-member team project focused on student privacy and data security</li>
+                  <li>OAuth 2.0 implementation protecting user authentication flows</li>
+                  <li>Personalized university search with individual user story matching</li>
+                  <li>Automated deadline reminders with secure notification system</li>
+                </ul>
+                <div class="cyber-project-card__stack">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>OAuth 2.0</span>
+                </div>
+              </div>
+              <div class="cyber-project-card__threat-level">
+                <span class="cyber-threat-label">SECURITY LEVEL</span>
+                <div class="cyber-threat-bar">
+                  <div class="cyber-threat-fill" style="--fill-width: 80%"></div>
+                </div>
+                <span class="cyber-threat-value">ELEVATED</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 4.5: HANDS-ON SECURITY LABS
+             ============================================ -->
+        <section class="cyber-section" id="cyber-labs" data-animate="fade">
+          <div class="section-heading">
+            <p class="eyebrow">// lab_exercises</p>
+            <h2>Hands-on Security Labs</h2>
+          </div>
+
+          <div class="cyber-coursework-grid">
+            <div class="cyber-course-card cyber-course-card--security">
+              <div class="cyber-course-card__number">> SEED LAB 01</div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent-main); margin-bottom: 0.25rem;">
+                <i data-lucide="network" style="width: 18px; height: 18px;"></i>
+                <h4 style="margin: 0;">Wireshark Packet Analysis</h4>
+              </div>
+              <p>Monitored and captured live network traffic to analyze packet structures, identify suspicious communication patterns, trace UDP/TCP streams, and inspect protocol headers.</p>
             </div>
 
-            <div class="glass-abstract-content">
-              <h4>Abstract</h4>
-              <p>
-                Quality education should not depend on where you are born or how much money your family
-                has. Yet hundreds of millions of students worldwide lack access to the kind of personalized
-                support that makes learning actually work. This paper examines two AI-powered tools I
-                developed to address different pieces of this problem. The first is a Computer Science
-                learning platform that generates code examples tailored to what individual students care
-                about. Instead of teaching everyone the same way, it adapts. A student interested in music
-                gets examples about playlist manipulation. A student passionate about climate gets examples
-                analyzing environmental data. The concept stays the same, but the entry point changes. The
-                second is a question-and-answer system for NYU's Introduction to Engineering course that
-                gives students instant, accurate answers based on actual course materials while helping
-                instructors see where students struggle most. Both projects are in active development. I am
-                currently conducting surveys, focus groups, and research to understand what students actually
-                need as I continue building. This paper documents the technical design of both systems,
-                examines what they could realistically do for educational access, and honestly addresses
-                their limitations. Technology alone will not solve educational inequality. But tools designed
-                thoughtfully, tested carefully, and deployed with equity in mind can expand access to quality
-                learning for students who currently get left behind.
-              </p>
+            <div class="cyber-course-card cyber-course-card--security">
+              <div class="cyber-course-card__number">> SEED LAB 02</div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent-main); margin-bottom: 0.25rem;">
+                <i data-lucide="binary" style="width: 18px; height: 18px;"></i>
+                <h4 style="margin: 0;">Software Vulnerability Exploits</h4>
+              </div>
+              <p>Executed buffer overflow attacks inside isolated Linux environments to overwrite stack variables, alter program execution control flow, and execute arbitrary root-level shellcode.</p>
+            </div>
+
+            <div class="cyber-course-card cyber-course-card--security">
+              <div class="cyber-course-card__number">> SEED LAB 03</div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent-main); margin-bottom: 0.25rem;">
+                <i data-lucide="database" style="width: 18px; height: 18px;"></i>
+                <h4 style="margin: 0;">Web Authentication Exploitation</h4>
+              </div>
+              <p>Leveraged injection techniques like SQL injection to bypass application login logic and retrieve sensitive DB rows, and Cross-Site Scripting (XSS) to capture user session tokens.</p>
+            </div>
+
+            <div class="cyber-course-card cyber-course-card--security">
+              <div class="cyber-course-card__number">> SEED LAB 04</div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent-main); margin-bottom: 0.25rem;">
+                <i data-lucide="key" style="width: 18px; height: 18px;"></i>
+                <h4 style="margin: 0;">OS Hardening & Access Audits</h4>
+              </div>
+              <p>Investigated privilege escalation vulnerabilities, analyzed Set-UID programs to understand boundary-crossing safety, and audited system configurations to mitigate host exploitation.</p>
             </div>
           </div>
         </section>
 
         <!-- ============================================
-             SECTION 8: RESUME & CONTACT
+             SECTION 5: CERTIFICATIONS
              ============================================ -->
-        <section class="glass-section" id="glass-contact" data-animate="fade">
+        <section class="cyber-section" id="cyber-certs" data-animate="fade">
+          <div class="section-heading">
+            <p class="eyebrow">// certifications</p>
+            <h2>Credentials & Training</h2>
+          </div>
+
+          <div class="cyber-certs-grid">
+            <div class="cyber-cert-card">
+              <div class="cyber-cert-card__icon">
+                <i data-lucide="award"></i>
+              </div>
+              <div class="cyber-cert-card__content">
+                <h4>Cybersecurity Upskilling & Frameworks</h4>
+                <p class="cyber-cert-card__provider">LinkedIn Learning</p>
+                <span class="cyber-cert-card__date">Mar 2025</span>
+              </div>
+            </div>
+
+            <div class="cyber-cert-card">
+              <div class="cyber-cert-card__icon">
+                <i data-lucide="award"></i>
+              </div>
+              <div class="cyber-cert-card__content">
+                <h4>Securing Cryptocurrencies</h4>
+                <p class="cyber-cert-card__provider">LinkedIn Learning</p>
+                <span class="cyber-cert-card__date">Apr 2025</span>
+              </div>
+            </div>
+
+            <div class="cyber-cert-card">
+              <div class="cyber-cert-card__icon">
+                <i data-lucide="award"></i>
+              </div>
+              <div class="cyber-cert-card__content">
+                <h4>Operating Systems: Overview, Admin & Security</h4>
+                <p class="cyber-cert-card__provider">IBM</p>
+                <span class="cyber-cert-card__date">Nov 2022</span>
+              </div>
+            </div>
+
+            <div class="cyber-cert-card">
+              <div class="cyber-cert-card__icon">
+                <i data-lucide="award"></i>
+              </div>
+              <div class="cyber-cert-card__content">
+                <h4>Cybersecurity Roles, Processes & OS Security</h4>
+                <p class="cyber-cert-card__provider">Coursera</p>
+                <span class="cyber-cert-card__date">Nov 2022</span>
+              </div>
+            </div>
+
+            <div class="cyber-cert-card">
+              <div class="cyber-cert-card__icon">
+                <i data-lucide="award"></i>
+              </div>
+              <div class="cyber-cert-card__content">
+                <h4>Product Management Job Simulation</h4>
+                <p class="cyber-cert-card__provider">Electronic Arts (Forage)</p>
+                <span class="cyber-cert-card__date">Apr 2026</span>
+              </div>
+            </div>
+
+            <div class="cyber-cert-card">
+              <div class="cyber-cert-card__icon">
+                <i data-lucide="award"></i>
+              </div>
+              <div class="cyber-cert-card__content">
+                <h4>Personal Banker Job Simulation</h4>
+                <p class="cyber-cert-card__provider">Wells Fargo (Forage)</p>
+                <span class="cyber-cert-card__date">Apr 2026</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 6: COURSEWORK
+             ============================================ -->
+        <section class="cyber-section" id="cyber-coursework" data-animate="fade">
+          <div class="section-heading">
+            <p class="eyebrow">// coursework</p>
+            <h2>Relevant Studies</h2>
+          </div>
+
+          <div class="cyber-coursework-grid">
+            <div class="cyber-course-card cyber-course-card--security">
+              <div class="cyber-course-card__number">CMPT 369</div>
+              <h4>Cybersecurity Lab</h4>
+              <p>Hands-on security exercises: penetration testing, vulnerability analysis, authentication systems, and network defense.</p>
+            </div>
+            <div class="cyber-course-card">
+              <div class="cyber-course-card__number">CMPT 456</div>
+              <h4>Software Engineering</h4>
+              <p>Secure software development lifecycle, Agile methodologies, OAuth implementation, and team-based project delivery.</p>
+            </div>
+            <div class="cyber-course-card cyber-course-card--security">
+              <div class="cyber-course-card__number">CMPT</div>
+              <h4>Computer Security</h4>
+              <p>Cryptography, access control models, malware analysis, and security protocols for modern computing environments.</p>
+            </div>
+            <div class="cyber-course-card">
+              <div class="cyber-course-card__number">CMPT</div>
+              <h4>Operating Systems</h4>
+              <p>Process management, memory protection, kernel security, file system permissions, and OS-level hardening techniques.</p>
+            </div>
+            <div class="cyber-course-card">
+              <div class="cyber-course-card__number">CMPT</div>
+              <h4>Data Structures & Algorithms</h4>
+              <p>Efficient data handling, algorithmic complexity, and optimization — foundational to writing secure and performant code.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 7: CONTACT
+             ============================================ -->
+        <section class="cyber-section" id="cyber-contact" data-animate="fade">
           <div class="section-heading">
             <p class="eyebrow">// contact</p>
             <h2>Let's Connect</h2>
           </div>
-          
-          <div class="glass-contact">
-            <div class="glass-contact__photo">
-              <img 
-                src="assets/IMG_2464.jpg" 
-                alt="Adonis Garcia professional headshot"
-                loading="lazy"
-              />
-            </div>
-            
-            <div class="glass-contact__info">
-              <h3>Adonis Garcia</h3>
-              <p>GLASS Scholar • Computer Science • NYU Tandon '26</p>
-              
-              <div class="glass-contact__links">
-                <a href="mailto:adonis.garcia@nyu.edu" class="glass-contact__link">
-                  <i data-lucide="mail"></i> adonis.garcia@nyu.edu
+
+          <div class="cyber-contact">
+            <div class="cyber-contact__info">
+              <h3>Joseph Decossard</h3>
+              <p>Computer Science • Manhattan University '26</p>
+              <p class="cyber-contact__languages">English · French · Creole (Trilingual)</p>
+
+              <div class="cyber-contact__links">
+                <a href="mailto:jedecossard@gmail.com" class="cyber-contact__link">
+                  <i data-lucide="mail"></i> jedecossard@gmail.com
                 </a>
-                <a href="https://linkedin.com/in/adonis-garcia-swe" target="_blank" rel="noopener" class="glass-contact__link">
+                <a href="https://linkedin.com/in/josephdecossard" target="_blank" rel="noopener" class="cyber-contact__link">
                   <i data-lucide="linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/jd24610" target="_blank" rel="noopener" class="cyber-contact__link">
+                  <i data-lucide="github"></i> GitHub (Personal)
+                </a>
+                <a href="https://github.com/jdecossard01" target="_blank" rel="noopener" class="cyber-contact__link">
+                  <i data-lucide="github"></i> GitHub (School)
                 </a>
               </div>
             </div>
-            
-            <div class="glass-contact__actions">
-              <a class="btn btn--primary" href="assets/Adonis_Garcia_Resume.pdf" target="_blank" rel="noopener">
+
+            <div class="cyber-contact__actions">
+              <a class="btn btn--primary" href="assets/Joseph_Decossard_Resume.pdf" target="_blank" rel="noopener">
                 View Resume
               </a>
-              <a class="btn btn--ghost" href="assets/Adonis_Garcia_Resume.pdf" download>
+              <a class="btn btn--ghost" href="assets/Joseph_Decossard_Resume.pdf" download>
                 Download Resume
               </a>
             </div>
           </div>
-          
+
           <!-- Back to Portfolio Link -->
-          <a href="index.html" class="glass-back-link">
+          <a href="index.html" class="cyber-back-link">
             Return to Main Portfolio
           </a>
         </section>
@@ -806,10 +572,10 @@
       </main>
 
       <footer class="site-footer">
-        <p>© Adonis Garcia <span id="current-year"></span>. NYU GLASS Scholar.</p>
+        <p>© Joseph Decossard <span id="current-year"></span>. Security researcher. Builder.</p>
       </footer>
     </div>
-    
-    <script src="glass.js" defer></script>
+
+    <script src="cyber.js" defer></script>
   </body>
 </html>

@@ -1,294 +1,254 @@
 {
-  "name": "Adonis Garcia",
+  "name": "Joseph Decossard",
   "contact": {
-    "email": "adonis.garcia@nyu.edu",
-    "linkedin": "https://linkedin.com/in/adonis-garcia-swe",
-    "github": "https://github.com/adonis-garcia-git",
-    "portfolio": "https://adonisgarcia.com",
-    "location": "New York, NY"
+    "phone": "+1 (646)-322-2356",
+    "email": "jedecossard@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/josephdecossard",
+    "github": "https://github.com/jd24610",
+    "githubSchool": "https://github.com/jdecossard01",
+    "location": "New York City, NY"
   },
   "education": [
     {
-      "school": "New York University, Tandon School of Engineering",
-      "location": "Brooklyn, NY",
-      "degree": "Bachelor of Science in Computer Science",
-      "minor": "Mathematics",
-      "expectedGraduation": "May 2026",
-      "gpa": "4.0 / 4.0",
-      "logo": "assets/nyu-logo.png",
-      "logoAlt": "New York University logo",
-      "studyAbroad": [
-        "NYU Abu Dhabi, UAE (Spring 2024/2025)",
-        "Hanyang University, Seoul, Korea (January 2025)"
+      "school": "Manhattan University",
+      "location": "Riverdale, NY",
+      "degree": "Bachelor of Arts in Computer Science",
+      "expectedGraduation": "Graduated May 2026",
+      "gpa": "3.4",
+      "logo": "assets/mu-logo.svg",
+      "logoAlt": "Manhattan University logo",
+      "coursework": [
+        "Cybersecurity Lab",
+        "Data Structures & Algorithms",
+        "Software Engineering",
+        "Computer Security",
+        "Operating Systems",
+        "Computer Organization",
+        "Web Security",
+        "Computer Networks"
       ],
       "organizations": [
-        "NYU Higher Education Opportunity Program (HEOP)",
-        "Society of Hispanic Professional Engineers (SHPE)",
-        "National Society of Black Engineers (NSBE)",
-        "NYU Academic Achievement Program (AAP)",
-        "NYU Global Leaders and Scholars in STEM Honors Program (GLASS)",
-        "Institute for Responsible Leadership (I4RC)"
-      ],
-      "programs": [
-        "Global Leaders and Scholars in STEM (GLASS) Honors Program"
-      ],
-      "honors": [
-        "NYU Outstanding Innovator Award 2022",
-        "NYU Gunter Georgi Award 2022",
-        "NYU Scholar of the Year 2023",
-        "NYU GLASS Honors"
-      ],
-      "coursework": [
-        "Applied Machine Learning",
-        "Data Structures",
-        "Object-Oriented Programming",
-        "Algorithms",
-        "Artificial Intelligence",
-        "Operating Systems",
-        "Computer Architecture",
-        "Linear Algebra",
-        "Probability and Statistics",
-        "Discrete Math"
+        "Transition from the Heart (Web Developer & Online Social Management)"
       ]
     }
   ],
   "experience": [
     {
       "id": "01",
-      "company": "MissionML",
-      "title": "Applied AI Inference Engineer",
-      "teamFocus": "Government AI Solutions Team",
-      "date": "Sep 2025 – Present",
-      "location": "Remote",
-      "logo": "assets/missionml-favicon-volt.png",
-      "logoAlt": "MissionML logo",
-      "description": "Partnering with federal stakeholders to architect ML solutions, translating mission requirements into production-ready systems.",
+      "company": "Manhattan University",
+      "title": "MU Summer Conference Assistant",
+      "teamFocus": "Summer Conferences & Events",
+      "date": "May 2025 – Aug 2025",
+      "location": "Riverdale, NY",
+      "logo": "assets/mu-logo.svg",
+      "logoAlt": "Manhattan University logo",
+      "description": "Provided customer service to large guest groups, managed check-ins, resolved facility issues, and liaised with campus staff in a high-volume environment.",
       "highlights": [
-        "Partner with federal stakeholders to architect ML solutions, translating mission requirements into production-ready systems",
-        "Built and deployed distributed ML pipelines on AWS infrastructure using Python, TypeScript, React, and PostgreSQL",
-        "Optimized inference workflows with caching and batching strategies, reducing response latency and operational costs by 80%",
-        "Maintained 99.9% uptime across 5+ clients through robust monitoring and comprehensive technical documentation"
+        "Provided customer service to large guest groups of several hundred students every two weeks; managed check-ins, resolved facility issues, and liaised with campus staff",
+        "Managed room assignment logistics and escorted guests to accommodations prior to arrivals",
+        "Maintained professionalism and composure in a high-volume, fast-paced customer-facing environment"
       ],
-      "tags": ["Python", "TypeScript", "React", "PostgreSQL", "AWS", "ML Pipelines"]
+      "tags": ["Customer Service", "Event Management", "Logistics", "Communication"]
     },
     {
       "id": "02",
-      "company": "Bank of America",
-      "title": "Software Engineer",
-      "teamFocus": "Employee Experience Technology Team",
-      "date": "May 2025 – Aug 2025",
-      "location": "Charlotte, NC",
-      "logo": "assets/bofa.png",
-      "logoAlt": "Bank of America logo",
-      "description": "Redesigned internal financial applications and architected automated backend workflows for enterprise systems.",
+      "company": "Legoland",
+      "title": "Supervisor",
+      "teamFocus": "Restaurant Operations",
+      "date": "Jun 2022 – Jan 2025",
+      "location": "Goshen, NY",
+      "logo": "assets/legoland-logo.png",
+      "logoAlt": "Legoland logo",
+      "description": "Supervised daily restaurant operations, trained new staff on service procedures and brand standards, and coordinated shift coverage during peak hours.",
       "highlights": [
-        "Redesigned internal financial application using .NET Core and SQL, reducing monthly operational workload by 90%",
-        "Architected automated backend workflows using Python, reducing processing time by 95% for platform generating $2M ARR",
-        "Led development of enterprise networking platform using Python, connecting 2000+ users with 80%+ engagement rate"
+        "Supervised daily restaurant operations; ensured food stations, supplies, and equipment were stocked and guest-ready at all times",
+        "Trained and mentored new staff on service procedures, safety protocols, and brand standards",
+        "Coordinated shift coverage and delegated tasks to maximize team efficiency during peak hours"
       ],
-      "tags": [".NET Core", "SQL", "Python", "Automation", "Enterprise Software", "Backend"]
+      "tags": ["Leadership", "Operations", "Training", "Team Management"]
     },
     {
       "id": "03",
-      "company": "Polydelta AI",
-      "title": "AI Software Engineer",
-      "teamFocus": "Government AI Solutions Team",
-      "date": "Jun 2024 – Jun 2025",
-      "location": "Arlington, VA / Hybrid",
-      "logo": "assets/polydelta.jpg",
-      "logoAlt": "Polydelta AI logo",
-      "description": "Developed production-grade LLM-powered chatbots with RAG and built document processing pipelines for government applications.",
+      "company": "Hebrew Educational Society Summer Camp",
+      "title": "Camp Counselor",
+      "teamFocus": "Youth Programs",
+      "date": "Jun 2021 – Aug 2021",
+      "location": "Brooklyn, NY",
+      "logo": "assets/hes-logo.png",
+      "logoAlt": "HES Summer Camp logo",
+      "description": "Supervised 10–12 campers during activities, meals, and free time while enforcing medical and dietary safety protocols.",
       "highlights": [
-        "Developed production-grade LLM-powered chatbots with RAG using Python, JavaScript, TypeScript, and LangChain",
-        "Built document processing pipelines on AWS that crawled, embedded, and stored 10,000+ documents in vector databases",
-        "Constructed models to optimize legal-domain embeddings and built stakeholder demos that secured federal AI adoption"
+        "Supervised 10–12 campers during activities, meals, and free time; enforced medical and dietary safety protocols",
+        "Organized and led swimming, hiking, and nature walk activities in collaboration with fellow camp staff",
+        "Communicated camper progress and milestones to parents throughout the summer program"
       ],
-      "tags": ["Python", "JavaScript", "TypeScript", "LangChain", "LLM", "RAG", "AWS", "Vector Databases"]
-    },
-    {
-      "id": "04",
-      "company": "New York University",
-      "title": "Teaching Assistant",
-      "teamFocus": "General Engineering Education Team",
-      "date": "Jul 2023 – May 2024",
-      "location": "New York, NY",
-      "logo": "assets/nyu-logo.png",
-      "logoAlt": "NYU General Engineering Department logo",
-      "description": "Provided instructional support to undergraduate students in general engineering, computer science, and applied machine learning labs, focusing on hands-on prototyping and technical mentorship.",
-      "highlights": [
-        "Taught weekly programming labs to 50+ students with hands-on support; reduced engineering errors by 25%",
-        "Led workshops on cross-functional prototyping, coding, engineering design, AI/ML, sustainability, circuitry and more"
-      ],
-      "tags": ["Teaching", "Education", "Python", "Engineering Design", "AI/ML", "Workshops"]
+      "tags": ["Youth Development", "Safety Protocols", "Communication", "Team Collaboration"]
     }
   ],
   "projects": [
     {
-      "name": "Tech@NYU Buildathon 2026 - Switchy",
-      "tech": ["Next.js", "React", "TypeScript", "Convex", "Claude API", "Three.js", "Stripe"],
-      "location": "New York, NY",
+      "name": "Google OAuth 2.0 Authentication Service",
+      "tech": ["Node.js", "Express", "Google Auth Library", "Firebase", "Passport.js"],
+      "location": "CMPT 369 – Cybersecurity Lab",
       "description": [
-        "Built AI keyboard advisor with multi-turn Claude chat and RAG-enriched recommendations to eliminate hallucinations.",
-        "Integrated AI search layer for real-time product validation and automated weekly intelligence from Reddit and vendor data.",
-        "Shipped full-stack platform with 300+ products, Three.js 3D preview, Stripe subscriptions, and affiliate revenue tracking."
+        "Engineered a standalone OAuth 2.0 verification API using Express.js and the google-auth-library to protect user resources.",
+        "Integrated Firebase Authentication for step verification (MFA), enforcing a second authentication factor to harden user account security.",
+        "Configured secure routing redirects, session serialization, and backend auth checks to guard protected dashboard endpoints."
+      ],
+      "repo": "https://github.com/jd24610/Web-authentication",
+      "logo": null,
+      "logoAlt": null
+    },
+    {
+      "name": "CMPT 490 Capstone: Turkey.app",
+      "tech": ["Python", "SQLite", "Qdrant", "Lightning.ai"],
+      "location": "Manhattan University",
+      "description": [
+        "Collaborated in a 4-member team using Agile/Scrum methodologies to develop a secure full-stack web application for image storage, organization, and semantic search.",
+        "Implemented backend functionality for user authentication, storage capacity management, and image upload/import/export.",
+        "Employed sprint planning for weekly team meetings; feature delivery and backlog reporting."
+      ],
+      "repo": "https://github.com/jd24610/turkey.app",
+      "logo": null,
+      "logoAlt": null
+    },
+    {
+      "name": "College Application Tracker (CAT)",
+      "tech": ["HTML", "CSS", "JavaScript", "OAuth 2.0"],
+      "location": "CMPT 456 – Software Engineering",
+      "description": [
+        "Designed and built a web-based application in a 3-member team to help students research universities based on majors, track application deadlines, and receive automated reminders.",
+        "Personalized university search results based on individual user stories to match students with their optimal educational institutions.",
+        "Implemented secure user authentication using OAuth 2.0 to protect user privacy."
+      ],
+      "repo": "https://github.com/jdecossard01/college-application-tracker",
+      "logo": null,
+      "logoAlt": null
+    },
+    {
+      "name": "Foster Care Information Website",
+      "tech": ["HTML", "CSS", "UX Design"],
+      "location": "Freelance Project",
+      "description": [
+        "Contracted with a foster-home owner to design and build a website communicating the organization's mission, services, and resources (Home, About, Services, Contact pages).",
+        "Strengthened professional skills in client communication, responsive UX design, and independent project planning."
+      ],
+      "repo": "https://github.com/jd24610/health-website",
+      "logo": null,
+      "logoAlt": null
+    },
+    {
+      "name": "Transition from the Heart Website",
+      "tech": ["HTML", "CSS", "JavaScript", "Web Development", "Social Media Management"],
+      "location": "Freelance / Nonprofit Project",
+      "description": [
+        "Designed, built, and launched the official website for the Transition from the Heart nonprofit organization, showcasing their programs, services, and community impact.",
+        "Managed online social presence, establishing channel integrations and digital outreach frameworks.",
+        "Improved website SEO, mobile responsiveness, and layout architecture for volunteer and donor onboarding."
       ],
       "repo": null,
       "logo": null,
       "logoAlt": null
     },
     {
-      "name": "Course Q&A RAG System",
-      "tech": ["Next.js", "TypeScript", "FastAPI", "Pinecone", "PostgreSQL", "AWS", "Anthropic API"],
-      "location": "New York, NY",
+      "name": "Personal Portfolio Website",
+      "tech": ["HTML", "CSS", "JavaScript", "Canvas API", "Intersection Observer"],
+      "location": "Personal Project",
       "description": [
-        "Built full-stack RAG application with TypeScript/Next.js for users to query documents with real-time analytics dashboard.",
-        "Engineered document processing pipeline on AWS with HDBSCAN clustering to surface insights from unstructured data."
+        "Designed and built a modern, responsive developer portfolio featuring a 3D coverflow experience carousel, canvas particle effects, and an interactive terminal boot sequence.",
+        "Integrated a cybersecurity lab page with Matrix rain, a real-time typing simulator widget, scroll tracking, and security coursework timeline.",
+        "Optimized layout performance, page weight, SEO semantic elements, and full accessibility compliance (WCAG)."
       ],
-      "repo": null,
+      "repo": "https://github.com/jd24610/small-business-website-builder",
       "logo": null,
       "logoAlt": null
     },
     {
-      "name": "Personalized CS Learning Platform",
-      "tech": ["React", "TypeScript", "Node.js", "Claude API", "PostgreSQL", "AWS"],
-      "location": "New York, NY",
+      "name": "Human Trafficking Research",
+      "tech": ["Sociological Analysis", "Research Methods"],
+      "location": "Intro to Sociology (Prof. Maria Hernandez)",
       "description": [
-        "Developed full-stack web app using React and Node.js that personalizes educational content via LLM integration.",
-        "Implemented structured prompt engineering with Claude API to generate contextual code examples across 8+ concepts."
+        "Researched human trafficking patterns affecting young women in Gambia, Senegal, and Kenya.",
+        "Analyzed socioeconomic causes and physiological/psychological effects on survivors (financial exploitation, coercion, forced immigration)."
       ],
       "repo": null,
-      "logo": null,
-      "logoAlt": null
-    },
-    {
-      "name": "TermGrid",
-      "tech": ["Swift", "macOS", "Accessibility API", "YAML"],
-      "location": "New York, NY",
-      "description": [
-        "Built macOS menu bar app that spawns and arranges terminal windows in grid layouts via hotkey-triggered YAML presets.",
-        "Designed for multi-agent CLI workflows; supports 6 terminal emulators with configurable grids and global shortcuts."
-      ],
-      "repo": null,
-      "logo": null,
-      "logoAlt": null
-    },
-    {
-      "name": "NYUAD Hackathon for Social Good – Q-quake/الൂളز-ك",
-      "tech": ["Python", "Quantum Computing", "AI", "APIs", "Data Science"],
-      "location": "Abu Dhabi, UAE",
-      "description": [
-        "Built hybrid earthquake early warning system using ML and quantum sensing, targeting 1+ minute warning improvements.",
-        "Collaborated with global team to build pipeline fusing seismic and quantum data, winning 2nd place and Audience Choice."
-      ],
-      "repo": "https://github.com/elucidator8918/NYUAD",
-      "logo": "assets/qquake-logo.png",
-      "logoAlt": "Q-quake project logo"
-    },
-    {
-      "name": "The E-Glove",
-      "tech": ["Python", "C++", "Arduino", "OpenCV", "PySerial", "Pynput", "Fusion 360"],
-      "location": "New York, NY",
-      "description": [
-        "Designed and built wireless glove mouse using computer vision and mechanical actuation; won two NYU innovation awards.",
-        "Achieved 92% tracking accuracy by creating custom OpenCV algorithms with real-time serial communication via PySerial."
-      ],
-      "repo": "https://github.com/adonis-garcia-git/E-Glove",
-      "logo": "assets/eglove-logo.png",
-      "logoAlt": "E-Glove project logo"
-    },
-    {
-      "name": "PollEv Notifier",
-      "tech": ["JavaScript", "Chrome Extensions API", "HTML", "CSS"],
-      "location": "New York, NY",
-      "description": [
-        "Built Chrome extension that monitors PollEv for live polls and sends instant desktop and mobile push notifications.",
-        "Implemented multi-class scheduling with auto-open tabs, time-based monitoring, and persistent state across sessions."
-      ],
-      "repo": null,
-      "logo": null,
-      "logoAlt": null
-    },
-    {
-      "name": "Portfolio Website",
-      "tech": ["HTML", "CSS", "JavaScript", "TailwindCSS", "JSON", "Responsive Design"],
-      "location": "New York, NY",
-      "description": [
-        "Designed and developed a fully responsive portfolio website to showcase personal projects, skills, and experiences.",
-        "Implemented dynamic content rendering frontend using JSON and integrated TailwindCSS for a modern aesthetic."
-      ],
-      "repo": "https://github.com/adonis-garcia-git/portfolio",
       "logo": null,
       "logoAlt": null
     }
   ],
-  "leadership": [
+  "certifications": [
     {
-      "role": "Founder and Lead Mentor",
-      "organization": "NYU Academic Achievement Program",
-      "date": "May 2023 – Present",
-      "details": [
-        "Founded NYU Tandon Gentlemen of Quality mentorship program supporting underrepresented students in STEM majors."
-      ]
+      "name": "Product Management Job Simulation",
+      "provider": "Electronic Arts (Forage)",
+      "date": "Apr 2026"
     },
     {
-      "role": "Committee Chair",
-      "organization": "NYU AAP Computer Science Initiative",
-      "date": "May 2024 – Present",
-      "details": [
-        "Organized 8+ technical events per semester and led CS workshops reaching 200+ Black, Latinx, and Indigenous students."
-      ]
+      "name": "Personal Banker Job Simulation",
+      "provider": "Wells Fargo (Forage)",
+      "date": "Apr 2026"
     },
     {
-      "role": "Institute Scholar",
-      "organization": "Institute for Responsible Leadership",
-      "date": "Feb 2024 – Aug 2025",
-      "details": [
-        "Selected as one of 12 scholars nationwide for a highly competitive leadership and ethics fellowship.",
-        "Completed Fortune 500 internships, executive briefings, and academic seminars focused on sustainable leadership."
-      ]
+      "name": "Cybersecurity Upskilling & Frameworks",
+      "provider": "LinkedIn Learning",
+      "date": "Mar 2025"
+    },
+    {
+      "name": "Securing Cryptocurrencies",
+      "provider": "LinkedIn Learning",
+      "date": "Apr 2025"
+    },
+    {
+      "name": "Operating Systems: Overview, Administration, and Security",
+      "provider": "IBM",
+      "date": "Nov 2022"
+    },
+    {
+      "name": "Cybersecurity Roles, Processes & OS Security",
+      "provider": "Coursera",
+      "date": "Nov 2022"
     }
   ],
   "skills": {
     "languages": [
       "Python",
-      "TypeScript",
-      "React",
-      "Next.js",
-      "C#",
       "JavaScript",
-      ".NET Core",
-      "SQL",
-      "Java",
+      "TypeScript",
       "C++",
-      "Swift",
-      "HTML",
+      "SQL (SQLite)",
       "CSS",
-      "LaTeX"
+      "HTML",
+      "MATLAB",
+      "Java",
+      "Bash"
     ],
-    "mlFrameworks": [
-      "PyTorch",
-      "HuggingFace",
-      "LangChain",
+    "mlAI": [
+      "Qdrant (Vector Databases)",
       "Pinecone",
+      "HuggingFace",
+      "AI Automation",
       "RAG",
       "Prompt Engineering",
-      "Vector Databases",
-      "Claude Code"
+      "LangChain",
+      "Semantic Search",
+      "Lightning.ai"
     ],
     "tools": [
+      "Docker",
+      "Vercel",
+      "Firebase",
       "Git",
       "GitHub",
-      "AWS",
-      "Docker",
-      "GCP",
-      "Convex",
-      "PostgreSQL",
+      "GitLab",
+      "Azure DevOps",
+      "Linux (Kernel/OS)",
+      "MacOS",
       "REST APIs",
-      "CI/CD",
-      "FastAPI",
-      "Agile"
+      "Node.js",
+      "Wireshark",
+      "Seed Lab",
+      "Hardware/IT"
     ],
-    "spokenLanguages": ["English (Native)", "Spanish (Native)"],
-    "interests": ["Travel", "Sci-Fi", "Gym", "Music", "Video Games", "Baseball", "Chess", "Teaching"]
+    "spokenLanguages": ["English", "French", "Creole (Trilingual Speaker)"],
+    "interests": []
   }
 }
