@@ -159,6 +159,19 @@
         "Integrated a cybersecurity lab page with Matrix rain, a real-time typing simulator widget, scroll tracking, and security coursework timeline.",
         "Optimized layout performance, page weight, SEO semantic elements, and full accessibility compliance (WCAG)."
       ],
+      "repo": "https://github.com/jd24610/Personal-Portfolio",
+      "logo": null,
+      "logoAlt": null
+    },
+    {
+      "name": "Small Business Website Builder",
+      "tech": ["TypeScript", "React", "Vite", "Tailwind CSS"],
+      "location": "Personal Project",
+      "description": [
+        "Developed a responsive drag-and-drop website editor enabling small businesses to visually design and construct customized landing pages.",
+        "Engineered layout state management, styling configuration panels, and dynamic content rendering layers.",
+        "Integrated publishing pipelines for deployment, streamlining site creation workflows."
+      ],
       "repo": "https://github.com/jd24610/small-business-website-builder",
       "logo": null,
       "logoAlt": null
