@@ -1760,6 +1760,10 @@ main section {
   color: var(--accent-secondary);
 }
 
+.skill-group[data-type="security"] .skill-tag {
+  color: #ff6b6b;
+}
+
 .skill-group[data-type="frameworks"] .skill-tag {
   color: var(--phosphor);
 }

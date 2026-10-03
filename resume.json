@@ -35,6 +35,24 @@
   "experience": [
     {
       "id": "01",
+      "company": "Barker Consulting",
+      "title": "Account Executive",
+      "teamFocus": "B2B Telecom & Network Connectivity",
+      "date": "Sep 2026 – Present",
+      "location": "Manhattan, NY",
+      "logo": "assets/barker-logo.png",
+      "logoAlt": "Barker Consulting logo",
+      "description": "Conduct sales and client outreach while managing a sales territory, assessing commercial networking setups, and troubleshooting business internet connectivity.",
+      "highlights": [
+        "Conduct sales and client outreach while managing a sales territory and building relationships with business owners across Manhattan",
+        "Test and troubleshoot business internet connections to identify connectivity issues and verify router and network equipment operation",
+        "Visit businesses in assigned areas to assess their current internet and networking setup and assist with Verizon FiOS services and upgrades",
+        "Communicate with business owners and staff to understand service needs and document customer details in CRM-based workflows"
+      ],
+      "tags": ["Network Troubleshooting", "Verizon FiOS", "Router & Network Hardware", "CRM & Operations", "Client Outreach", "Data Analysis"]
+    },
+    {
+      "id": "02",
       "company": "Manhattan University",
       "title": "MU Summer Conference Assistant",
       "teamFocus": "Summer Conferences & Events",
@@ -42,16 +60,16 @@
       "location": "Riverdale, NY",
       "logo": "assets/mu-logo.svg",
       "logoAlt": "Manhattan University logo",
-      "description": "Provided customer service to large guest groups, managed check-ins, resolved facility issues, and liaised with campus staff in a high-volume environment.",
+      "description": "Managed check-ins and room logistics for guest groups of several hundred students every two weeks, resolving facility issues in a fast-paced environment.",
       "highlights": [
-        "Provided customer service to large guest groups of several hundred students every two weeks; managed check-ins, resolved facility issues, and liaised with campus staff",
+        "Managed check-ins and room logistics for guest groups of several hundred students every two weeks, resolving facility issues in a fast-paced environment",
         "Managed room assignment logistics and escorted guests to accommodations prior to arrivals",
         "Maintained professionalism and composure in a high-volume, fast-paced customer-facing environment"
       ],
       "tags": ["Customer Service", "Event Management", "Logistics", "Communication"]
     },
     {
-      "id": "02",
+      "id": "03",
       "company": "Legoland",
       "title": "Supervisor",
       "teamFocus": "Restaurant Operations",
@@ -59,7 +77,7 @@
       "location": "Goshen, NY",
       "logo": "assets/legoland-logo.png",
       "logoAlt": "Legoland logo",
-      "description": "Supervised daily restaurant operations, trained new staff on service procedures and brand standards, and coordinated shift coverage during peak hours.",
+      "description": "Supervised daily operations, trained new staff on procedures and safety protocols, and coordinated shift coverage during peak hours.",
       "highlights": [
         "Supervised daily restaurant operations; ensured food stations, supplies, and equipment were stocked and guest-ready at all times",
         "Trained and mentored new staff on service procedures, safety protocols, and brand standards",
@@ -68,7 +86,7 @@
       "tags": ["Leadership", "Operations", "Training", "Team Management"]
     },
     {
-      "id": "03",
+      "id": "04",
       "company": "Hebrew Educational Society Summer Camp",
       "title": "Camp Counselor",
       "teamFocus": "Youth Programs",
@@ -76,7 +94,7 @@
       "location": "Brooklyn, NY",
       "logo": "assets/hes-logo.png",
       "logoAlt": "HES Summer Camp logo",
-      "description": "Supervised 10–12 campers during activities, meals, and free time while enforcing medical and dietary safety protocols.",
+      "description": "Supervised 10–12 campers and led activities while enforcing medical and dietary safety protocols.",
       "highlights": [
         "Supervised 10–12 campers during activities, meals, and free time; enforced medical and dietary safety protocols",
         "Organized and led swimming, hiking, and nature walk activities in collaboration with fellow camp staff",
@@ -86,6 +104,57 @@
     }
   ],
   "projects": [
+    {
+      "name": "Self-Healing Endpoint Dashboard",
+      "tech": ["Python", "psutil", "rich", "IT Operations"],
+      "location": "Personal Project • 2026",
+      "description": [
+        "Built a real-time endpoint monitoring dashboard in Python that detects high CPU/resource usage processes and auto-generates support tickets.",
+        "Implemented ticket throttling logic (30-second cooldown per category) to prevent alert flooding, mirroring real SOC/helpdesk noise-reduction practices.",
+        "Used rich's Live display for a continuously updating terminal UI; leveraged AI-assisted development workflows to rapidly prototype and refine IT operations tooling."
+      ],
+      "repo": "https://github.com/jd24610/self-healing-endpoint-dashboard",
+      "logo": null,
+      "logoAlt": null
+    },
+    {
+      "name": "Mini SOC Detection Pipeline",
+      "tech": ["Suricata", "Scapy", "Python", "osTicket API", "Ubuntu Server (ARM64)"],
+      "location": "Personal Project • 2026",
+      "description": [
+        "Stood up an end-to-end detection pipeline: Scapy-crafted traffic → Suricata IDS alerts (eve.json) → Python parser → automated osTicket creation.",
+        "Applied AI-native development workflows to build and iterate on REST APIs and internal security tools while maintaining testing and Git-based practices.",
+        "Configured and deployed on a self-managed Ubuntu Server VM, handling ARM64/Apple Silicon virtualization constraints."
+      ],
+      "repo": "https://github.com/jd24610/mini-soc-detection-pipeline",
+      "logo": null,
+      "logoAlt": null
+    },
+    {
+      "name": "osTicket ITSM Deployment (Docker)",
+      "tech": ["Docker", "PHP", "MySQL", "Apache", "Linux"],
+      "location": "Personal Project • 2026",
+      "description": [
+        "Deployed a self-hosted osTicket ITSM instance using a custom Dockerfile after resolving MySQL 8 authentication and missing dependency issues in the upstream image.",
+        "Debugged container build failures end-to-end (broken base image, libicu-dev dependency) to produce a stable, reproducible ticketing environment."
+      ],
+      "repo": "https://github.com/jd24610/osticket-docker-lab",
+      "logo": null,
+      "logoAlt": null
+    },
+    {
+      "name": "Web Application Vulnerability Scanner",
+      "tech": ["Python", "TLS/Cookie Auditing", "VirusTotal API", "LLM / RAG"],
+      "location": "Personal Project • 2026",
+      "description": [
+        "Built a scanner that audits live websites for missing security headers, weak TLS configuration, and insecure cookie flags.",
+        "Designed a companion URL risk-assessment architecture combining Google Safe Browsing, VirusTotal, and PhishTank with an LLM-based secondary layer for phishing/brand-impersonation detection.",
+        "Integrated LLMs, RAG workflows, and external threat intelligence APIs into scalable security assessment components."
+      ],
+      "repo": "https://github.com/jd24610/Cybersecuirty-Risk-Scanner",
+      "logo": null,
+      "logoAlt": null
+    },
     {
       "name": "Google OAuth 2.0 Authentication Service",
       "tech": ["Node.js", "Express", "Google Auth Library", "Firebase", "Passport.js"],
@@ -104,9 +173,8 @@
       "tech": ["Python", "SQLite", "Qdrant", "Lightning.ai"],
       "location": "Manhattan University",
       "description": [
-        "Collaborated in a 4-member team using Agile/Scrum methodologies to develop a secure full-stack web application for image storage, organization, and semantic search.",
-        "Implemented backend functionality for user authentication, storage capacity management, and image upload/import/export.",
-        "Employed sprint planning for weekly team meetings; feature delivery and backlog reporting."
+        "Collaborated in a 4-member Agile/Scrum team to build a secure full-stack app for image storage, organization, and semantic search.",
+        "Implemented backend authentication, storage capacity management, and image upload/import/export; delivered final demo to department."
       ],
       "repo": "https://github.com/jd24610/turkey.app",
       "logo": null,
@@ -122,31 +190,6 @@
         "Implemented secure user authentication using OAuth 2.0 to protect user privacy."
       ],
       "repo": "https://github.com/jdecossard01/college-application-tracker",
-      "logo": null,
-      "logoAlt": null
-    },
-    {
-      "name": "Foster Care Information Website",
-      "tech": ["HTML", "CSS", "UX Design"],
-      "location": "Freelance Project",
-      "description": [
-        "Contracted with a foster-home owner to design and build a website communicating the organization's mission, services, and resources (Home, About, Services, Contact pages).",
-        "Strengthened professional skills in client communication, responsive UX design, and independent project planning."
-      ],
-      "repo": "https://github.com/jd24610/health-website",
-      "logo": null,
-      "logoAlt": null
-    },
-    {
-      "name": "Transition from the Heart Website",
-      "tech": ["HTML", "CSS", "JavaScript", "Web Development", "Social Media Management"],
-      "location": "Freelance / Nonprofit Project",
-      "description": [
-        "Designed, built, and launched the official website for the Transition from the Heart nonprofit organization, showcasing their programs, services, and community impact.",
-        "Managed online social presence, establishing channel integrations and digital outreach frameworks.",
-        "Improved website SEO, mobile responsiveness, and layout architecture for volunteer and donor onboarding."
-      ],
-      "repo": null,
       "logo": null,
       "logoAlt": null
     },
@@ -177,14 +220,27 @@
       "logoAlt": null
     },
     {
-      "name": "Human Trafficking Research",
-      "tech": ["Sociological Analysis", "Research Methods"],
-      "location": "Intro to Sociology (Prof. Maria Hernandez)",
+      "name": "Transition from the Heart Website",
+      "tech": ["HTML", "CSS", "JavaScript", "Web Development", "Social Media Management"],
+      "location": "Freelance / Nonprofit Project",
       "description": [
-        "Researched human trafficking patterns affecting young women in Gambia, Senegal, and Kenya.",
-        "Analyzed socioeconomic causes and physiological/psychological effects on survivors (financial exploitation, coercion, forced immigration)."
+        "Designed, built, and launched the official website for the Transition from the Heart nonprofit organization, showcasing their programs, services, and community impact.",
+        "Managed online social presence, establishing channel integrations and digital outreach frameworks.",
+        "Improved website SEO, mobile responsiveness, and layout architecture for volunteer and donor onboarding."
       ],
       "repo": null,
+      "logo": null,
+      "logoAlt": null
+    },
+    {
+      "name": "Foster Care Information Website",
+      "tech": ["HTML", "CSS", "UX Design"],
+      "location": "Freelance Project",
+      "description": [
+        "Contracted with a foster-home owner to design and build a website communicating the organization's mission, services, and resources (Home, About, Services, Contact pages).",
+        "Strengthened professional skills in client communication, responsive UX design, and independent project planning."
+      ],
+      "repo": "https://github.com/jd24610/health-website",
       "logo": null,
       "logoAlt": null
     }
@@ -234,11 +290,19 @@
       "Java",
       "Bash"
     ],
+    "securityNetworking": [
+      "Suricata (IDS)",
+      "Scapy",
+      "Wireshark",
+      "Nmap",
+      "TLS/Cookie Auditing",
+      "OAuth 2.0/MFA",
+      "SEED Labs (TCP/IP, PKI)"
+    ],
     "mlAI": [
-      "Qdrant (Vector Databases)",
-      "Pinecone",
+      "Qdrant",
+      "Pinecone (Vector Databases)",
       "HuggingFace",
-      "AI Automation",
       "RAG",
       "Prompt Engineering",
       "LangChain",
@@ -247,21 +311,22 @@
     ],
     "tools": [
       "Docker",
+      "ServiceNow",
+      "osTicket",
       "Vercel",
       "Firebase",
-      "Git",
-      "GitHub",
-      "GitLab",
+      "Git/GitHub/GitLab",
       "Azure DevOps",
-      "Linux (Kernel/OS)",
+      "Linux",
       "MacOS",
       "REST APIs",
-      "Node.js",
-      "Wireshark",
-      "Seed Lab",
-      "Hardware/IT"
+      "Node.js"
     ],
-    "spokenLanguages": ["English", "French", "Creole (Trilingual Speaker)"],
+    "spokenLanguages": [
+      "English",
+      "French",
+      "Creole (Trilingual Speaker)"
+    ],
     "interests": []
   }
 }

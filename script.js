@@ -1116,9 +1116,10 @@ const renderSkills = (skills = {}) => {
   groups.innerHTML = '';
 
   // Highlighted items (these will appear first in their categories)
-  const highlightedLanguages = ['Python'];
-  const highlightedFrameworks = ['RAG', 'LangChain', 'Pinecone'];
-  const highlightedTools = ['Git', 'GitHub', 'APIs', 'Agile'];
+  const highlightedLanguages = ['Python', 'TypeScript', 'JavaScript'];
+  const highlightedSecurity = ['Suricata (IDS)', 'Scapy', 'Wireshark', 'Nmap'];
+  const highlightedFrameworks = ['Qdrant', 'RAG', 'LangChain', 'Pinecone (Vector Databases)'];
+  const highlightedTools = ['Docker', 'ServiceNow', 'osTicket', 'Linux'];
   const highlightedInterests = ['Travel', 'Sci-Fi', 'Gym'];
 
   // Helper to sort highlighted items first
@@ -1136,6 +1137,7 @@ const renderSkills = (skills = {}) => {
   const getHighlighted = (type) => {
     switch (type) {
       case 'languages': return highlightedLanguages;
+      case 'security': return highlightedSecurity;
       case 'frameworks': return highlightedFrameworks;
       case 'tools': return highlightedTools;
       case 'interests': return highlightedInterests;
@@ -1146,8 +1148,9 @@ const renderSkills = (skills = {}) => {
   // Updated mapping to match resume.json keys
   const mapping = [
     { key: 'languages', label: 'Languages', type: 'languages' },
-    { key: 'mlFrameworks', label: 'ML & Frameworks', type: 'frameworks' },
-    { key: 'tools', label: 'Tools & Platforms', type: 'tools' },
+    { key: 'securityNetworking', label: 'Security & Networking', type: 'security' },
+    { key: 'mlAI', label: 'ML / AI', type: 'frameworks' },
+    { key: 'tools', label: 'Infrastructure & Tools', type: 'tools' },
     { key: 'spokenLanguages', label: 'Spoken Languages', type: 'spoken' },
     { key: 'interests', label: 'Interests', type: 'interests' },
   ];

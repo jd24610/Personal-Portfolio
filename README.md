@@ -51,8 +51,8 @@ portfolio-main/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/adonis-garcia-git/portfolio.git
-   cd portfolio
+   git clone https://github.com/jd24610/Personal-Portfolio.git
+   cd Personal-Portfolio
    ```
 
 2. **Open with a local server**
@@ -211,5 +211,5 @@ This project is open source and available for educational purposes. Feel free to
 
 **Built with curiosity, deployed with passion.** 🚀
 
-Last Updated: June 2026
+Last Updated: October 2026
 

@@ -164,15 +164,15 @@ const cmdSpan = document.getElementById('cyber-type-cmd');
 const terminalSequences = [
   {
     cmd: 'whoami',
-    output: 'joseph_decossard (security_researcher)\nstatus: actively_securing\naffiliation: Manhattan University \'26'
+    output: 'joseph_decossard (security_researcher & account_executive)\nstatus: actively_securing\naffiliation: Manhattan University \'26 | Barker Consulting'
   },
   {
     cmd: 'cat focus_areas.json',
-    output: '[\n  "Network Defense",\n  "Authentication & MFA",\n  "OS Hardening & Perms",\n  "Secure Software Design"\n]'
+    output: '[\n  "SOC Detection & Suricata IDS",\n  "Network & Telecom Troubleshooting",\n  "Authentication & MFA",\n  "ITSM & Endpoint Automation"\n]'
   },
   {
-    cmd: 'nmap -sV -F localhost',
-    output: 'Starting Nmap 7.92...\nNmap scan report for localhost (127.0.0.1)\nPORT    STATE SERVICE      VERSION\n22/tcp  open  ssh          OpenSSH 8.9\n80/tcp  open  http         nginx 1.18.0\n443/tcp open  ssl/http     nginx 1.18.0\n3000/tcp open http         Node.js Express\n\nNmap done: 1 IP address scanned in 0.45 seconds'
+    cmd: 'tail -n 3 /var/log/suricata/eve.json',
+    output: '{"event_type":"alert","src_ip":"10.0.2.15","alert":{"signature":"ET SCAN Scapy Crafted Packet"}}\n[>>] Python parser triggered -> Creating osTicket incident #4092...\n[OK] Ticket #4092 created (30s throttle active)'
   },
   {
     cmd: 'check_credentials --verify',

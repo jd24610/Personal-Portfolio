@@ -194,19 +194,17 @@
               </div>
             </div>
 
-            <!-- Security Tools -->
-            <div class="cyber-arsenal-group" data-category="SECURITY_TOOLS">
-              <h3>Security & Infrastructure</h3>
+            <!-- Security & Networking -->
+            <div class="cyber-arsenal-group" data-category="SECURITY_NETWORKING">
+              <h3>Security & Networking</h3>
               <div class="cyber-arsenal-tags">
+                <span class="cyber-tag cyber-tag--tool cyber-tag--highlight">Suricata (IDS)</span>
+                <span class="cyber-tag cyber-tag--tool cyber-tag--highlight">Scapy</span>
                 <span class="cyber-tag cyber-tag--tool cyber-tag--highlight">Wireshark</span>
-                <span class="cyber-tag cyber-tag--tool cyber-tag--highlight">Seed Lab</span>
-                <span class="cyber-tag cyber-tag--tool">Linux (Kernel/OS)</span>
-                <span class="cyber-tag cyber-tag--tool">Firebase Auth</span>
-                <span class="cyber-tag cyber-tag--tool">Docker</span>
-                <span class="cyber-tag cyber-tag--tool">Azure DevOps</span>
-                <span class="cyber-tag cyber-tag--tool">Git / GitHub / GitLab</span>
-                <span class="cyber-tag cyber-tag--tool">REST APIs</span>
-                <span class="cyber-tag cyber-tag--tool">Hardware/IT</span>
+                <span class="cyber-tag cyber-tag--tool cyber-tag--highlight">Nmap</span>
+                <span class="cyber-tag cyber-tag--tool">TLS/Cookie Auditing</span>
+                <span class="cyber-tag cyber-tag--tool">OAuth 2.0 / MFA</span>
+                <span class="cyber-tag cyber-tag--tool">SEED Labs (TCP/IP, PKI)</span>
               </div>
             </div>
 
@@ -215,7 +213,7 @@
               <h3>ML / AI</h3>
               <div class="cyber-arsenal-tags">
                 <span class="cyber-tag cyber-tag--ai">Qdrant</span>
-                <span class="cyber-tag cyber-tag--ai">Pinecone</span>
+                <span class="cyber-tag cyber-tag--ai">Pinecone (Vector DB)</span>
                 <span class="cyber-tag cyber-tag--ai">HuggingFace</span>
                 <span class="cyber-tag cyber-tag--ai">RAG</span>
                 <span class="cyber-tag cyber-tag--ai">LangChain</span>
@@ -225,16 +223,21 @@
               </div>
             </div>
 
-            <!-- Frameworks -->
-            <div class="cyber-arsenal-group" data-category="FRAMEWORKS">
-              <h3>Frameworks & Platforms</h3>
+            <!-- Infrastructure & Tools -->
+            <div class="cyber-arsenal-group" data-category="INFRASTRUCTURE">
+              <h3>Infrastructure & Tools</h3>
               <div class="cyber-arsenal-tags">
-                <span class="cyber-tag cyber-tag--fw">Node.js</span>
-                <span class="cyber-tag cyber-tag--fw">Express.js</span>
-                <span class="cyber-tag cyber-tag--fw">Passport.js</span>
-                <span class="cyber-tag cyber-tag--fw">SQLite</span>
-                <span class="cyber-tag cyber-tag--fw">Vercel</span>
+                <span class="cyber-tag cyber-tag--fw">Docker</span>
+                <span class="cyber-tag cyber-tag--fw">ServiceNow</span>
+                <span class="cyber-tag cyber-tag--fw">osTicket</span>
+                <span class="cyber-tag cyber-tag--fw">Linux (Ubuntu ARM64)</span>
                 <span class="cyber-tag cyber-tag--fw">MacOS</span>
+                <span class="cyber-tag cyber-tag--fw">Node.js / Express</span>
+                <span class="cyber-tag cyber-tag--fw">Firebase</span>
+                <span class="cyber-tag cyber-tag--fw">Vercel</span>
+                <span class="cyber-tag cyber-tag--fw">Git / GitHub / GitLab</span>
+                <span class="cyber-tag cyber-tag--fw">Azure DevOps</span>
+                <span class="cyber-tag cyber-tag--fw">REST APIs</span>
               </div>
             </div>
           </div>
@@ -246,11 +249,148 @@
         <section class="cyber-section" id="cyber-projects" data-animate="fade">
           <div class="section-heading">
             <p class="eyebrow">// projects</p>
-            <h2>Security Projects</h2>
+            <h2>Security & IT Operations Projects</h2>
           </div>
 
           <div class="cyber-projects-grid">
-            <!-- Project 1: OAuth -->
+            <!-- Project 1: Mini SOC Detection Pipeline -->
+            <article class="cyber-project-card">
+              <div class="cyber-project-card__header">
+                <div class="cyber-project-card__icon">
+                  <i data-lucide="radar"></i>
+                </div>
+                <div>
+                  <span class="cyber-project-card__badge">Personal Project • 2026</span>
+                  <h3>Mini SOC Detection Pipeline</h3>
+                </div>
+              </div>
+              <div class="cyber-project-card__body">
+                <p>End-to-end network intrusion detection and automated incident ticketing pipeline deployed on a self-managed Ubuntu Server (ARM64) VM.</p>
+                <ul class="cyber-project-card__highlights">
+                  <li>Built pipeline: Scapy-crafted traffic → Suricata IDS alerts (eve.json) → Python parser → automated osTicket creation</li>
+                  <li>Applied AI-native workflows to iterate on REST APIs and internal security tooling with full Git-based testing</li>
+                  <li>Configured and deployed on Ubuntu Server VM, resolving ARM64/Apple Silicon virtualization constraints</li>
+                </ul>
+                <div class="cyber-project-card__stack">
+                  <span>Suricata</span>
+                  <span>Scapy</span>
+                  <span>Python</span>
+                  <span>osTicket API</span>
+                  <span>Ubuntu ARM64</span>
+                </div>
+              </div>
+              <div class="cyber-project-card__threat-level">
+                <span class="cyber-threat-label">SECURITY LEVEL</span>
+                <div class="cyber-threat-bar">
+                  <div class="cyber-threat-fill" style="--fill-width: 95%"></div>
+                </div>
+                <span class="cyber-threat-value">CRITICAL</span>
+              </div>
+            </article>
+
+            <!-- Project 2: Web Application Vulnerability Scanner -->
+            <article class="cyber-project-card">
+              <div class="cyber-project-card__header">
+                <div class="cyber-project-card__icon">
+                  <i data-lucide="shield-alert"></i>
+                </div>
+                <div>
+                  <span class="cyber-project-card__badge">Personal Project • 2026</span>
+                  <h3>Web Application Vulnerability Scanner</h3>
+                </div>
+              </div>
+              <div class="cyber-project-card__body">
+                <p>Live web security scanner and AI-assisted URL risk-assessment architecture for auditing headers, TLS posture, cookies, and phishing threats.</p>
+                <ul class="cyber-project-card__highlights">
+                  <li>Audits live websites for missing security headers, weak TLS configurations, and insecure cookie flags</li>
+                  <li>Combines Google Safe Browsing, VirusTotal, and PhishTank with an LLM secondary layer for phishing/brand-impersonation detection</li>
+                  <li>Integrated LLMs, RAG workflows, and external threat intelligence APIs into scalable application components</li>
+                </ul>
+                <div class="cyber-project-card__stack">
+                  <span>Python</span>
+                  <span>TLS Auditing</span>
+                  <span>VirusTotal</span>
+                  <span>LLM / RAG</span>
+                </div>
+              </div>
+              <div class="cyber-project-card__threat-level">
+                <span class="cyber-threat-label">SECURITY LEVEL</span>
+                <div class="cyber-threat-bar">
+                  <div class="cyber-threat-fill" style="--fill-width: 90%"></div>
+                </div>
+                <span class="cyber-threat-value">HIGH</span>
+              </div>
+            </article>
+
+            <!-- Project 3: Self-Healing Endpoint Dashboard -->
+            <article class="cyber-project-card">
+              <div class="cyber-project-card__header">
+                <div class="cyber-project-card__icon">
+                  <i data-lucide="activity"></i>
+                </div>
+                <div>
+                  <span class="cyber-project-card__badge">Personal Project • 2026</span>
+                  <h3>Self-Healing Endpoint Dashboard</h3>
+                </div>
+              </div>
+              <div class="cyber-project-card__body">
+                <p>Real-time endpoint monitoring terminal dashboard that detects anomalous CPU/resource usage processes and auto-generates throttled support tickets.</p>
+                <ul class="cyber-project-card__highlights">
+                  <li>Real-time process telemetry and automated incident ticket generation in Python</li>
+                  <li>Implemented 30-second cooldown throttling per category to prevent alert flooding and mirror SOC noise-reduction practices</li>
+                  <li>Built continuously updating terminal UI using rich's Live display</li>
+                </ul>
+                <div class="cyber-project-card__stack">
+                  <span>Python</span>
+                  <span>psutil</span>
+                  <span>rich</span>
+                  <span>ITSM Automation</span>
+                </div>
+              </div>
+              <div class="cyber-project-card__threat-level">
+                <span class="cyber-threat-label">SECURITY LEVEL</span>
+                <div class="cyber-threat-bar">
+                  <div class="cyber-threat-fill" style="--fill-width: 85%"></div>
+                </div>
+                <span class="cyber-threat-value">HIGH</span>
+              </div>
+            </article>
+
+            <!-- Project 4: osTicket ITSM Deployment (Docker) -->
+            <article class="cyber-project-card">
+              <div class="cyber-project-card__header">
+                <div class="cyber-project-card__icon">
+                  <i data-lucide="container"></i>
+                </div>
+                <div>
+                  <span class="cyber-project-card__badge">Personal Project • 2026</span>
+                  <h3>osTicket ITSM Deployment (Docker)</h3>
+                </div>
+              </div>
+              <div class="cyber-project-card__body">
+                <p>Containerized, reproducible ITSM ticketing infrastructure engineered with a custom Dockerfile and hardened MySQL 8 backend.</p>
+                <ul class="cyber-project-card__highlights">
+                  <li>Deployed self-hosted osTicket ITSM instance after resolving MySQL 8 authentication and upstream dependency issues</li>
+                  <li>Debugged container build failures end-to-end (broken base image, libicu-dev dependency) for a stable ticketing lab</li>
+                </ul>
+                <div class="cyber-project-card__stack">
+                  <span>Docker</span>
+                  <span>PHP</span>
+                  <span>MySQL 8</span>
+                  <span>Apache</span>
+                  <span>Linux</span>
+                </div>
+              </div>
+              <div class="cyber-project-card__threat-level">
+                <span class="cyber-threat-label">SECURITY LEVEL</span>
+                <div class="cyber-threat-bar">
+                  <div class="cyber-threat-fill" style="--fill-width: 80%"></div>
+                </div>
+                <span class="cyber-threat-value">ELEVATED</span>
+              </div>
+            </article>
+
+            <!-- Project 5: OAuth -->
             <article class="cyber-project-card">
               <div class="cyber-project-card__header">
                 <div class="cyber-project-card__icon">
@@ -286,7 +426,7 @@
               </div>
             </article>
 
-            <!-- Project 2: Turkey.app -->
+            <!-- Project 6: Turkey.app -->
             <article class="cyber-project-card">
               <div class="cyber-project-card__header">
                 <div class="cyber-project-card__icon">
@@ -318,41 +458,6 @@
                   <div class="cyber-threat-fill" style="--fill-width: 75%"></div>
                 </div>
                 <span class="cyber-threat-value">MODERATE</span>
-              </div>
-            </article>
-
-            <!-- Project 3: CAT -->
-            <article class="cyber-project-card">
-              <div class="cyber-project-card__header">
-                <div class="cyber-project-card__icon">
-                  <i data-lucide="shield"></i>
-                </div>
-                <div>
-                  <span class="cyber-project-card__badge">CMPT 456 — Software Engineering</span>
-                  <h3>College Application Tracker (CAT)</h3>
-                </div>
-              </div>
-              <div class="cyber-project-card__body">
-                <p>Web application with secure OAuth 2.0 authentication protecting student data — university search, deadline tracking, and automated reminders built with privacy-first design.</p>
-                <ul class="cyber-project-card__highlights">
-                  <li>3-member team project focused on student privacy and data security</li>
-                  <li>OAuth 2.0 implementation protecting user authentication flows</li>
-                  <li>Personalized university search with individual user story matching</li>
-                  <li>Automated deadline reminders with secure notification system</li>
-                </ul>
-                <div class="cyber-project-card__stack">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
-                  <span>OAuth 2.0</span>
-                </div>
-              </div>
-              <div class="cyber-project-card__threat-level">
-                <span class="cyber-threat-label">SECURITY LEVEL</span>
-                <div class="cyber-threat-bar">
-                  <div class="cyber-threat-fill" style="--fill-width: 80%"></div>
-                </div>
-                <span class="cyber-threat-value">ELEVATED</span>
               </div>
             </article>
           </div>
