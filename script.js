@@ -20,7 +20,7 @@ const throttle = (func, delay = 16) => {
 
 const DATA_PATH = 'resume.json';
 const RESUME_PATH = 'assets/Joseph_Decossard_Resume.pdf';
-const TAGLINE = 'cs_graduate --cybersecurity --full_stack';
+const TAGLINE = 'cs_graduate --cloud --cybersecurity --full_stack';
 let resumeData = null;
 const siteHeader = document.querySelector('.site-header');
 
@@ -329,23 +329,37 @@ updateHeaderOnScroll();
 window.addEventListener('scroll', throttle(updateHeaderOnScroll, 16), { passive: true });
 
 // Fade-in observer with stagger support
+const revealElement = (el) => {
+  if (!el || el.classList.contains('visible')) return;
+  el.classList.add('visible');
+  const staggerChildren = el.querySelectorAll('[data-stagger]');
+  staggerChildren.forEach((child, index) => {
+    child.style.animationDelay = `${index * 0.08}s`;
+  });
+  fadeObserver.unobserve(el);
+};
+
 const fadeObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
-      
-      // Apply staggered delays to children
-      const staggerChildren = entry.target.querySelectorAll('[data-stagger]');
-      staggerChildren.forEach((child, index) => {
-        child.style.animationDelay = `${index * 0.08}s`;
-      });
-      
-      fadeObserver.unobserve(entry.target);
+      revealElement(entry.target);
     });
   },
-  { threshold: 0.15 }
+  { threshold: 0.05, rootMargin: '120px 0px' }
 );
+
+const revealPassedAnimations = () => {
+  const viewportBottom = window.innerHeight + 120;
+  document.querySelectorAll('[data-animate]:not(.visible)').forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top <= viewportBottom) {
+      revealElement(el);
+    }
+  });
+};
+
+window.addEventListener('scroll', throttle(revealPassedAnimations, 100), { passive: true });
 
 const registerAnimations = () => {
   document.querySelectorAll('[data-animate]').forEach((el) => {
@@ -353,6 +367,7 @@ const registerAnimations = () => {
       fadeObserver.observe(el);
     }
   });
+  revealPassedAnimations();
 };
 
 // Render helpers -----------------------------------------------------------
@@ -370,7 +385,7 @@ const renderHero = (data) => {
   // Greeting with name
   heroName.textContent = `Hi, I'm ${data.name}.`;
 
-  heroSummary.textContent = `Based in New York City, I'm a Computer Science graduate from Manhattan University with a passion for cybersecurity, full-stack development, and building impactful applications.`;
+  heroSummary.textContent = `Based in New York City, I'm a Computer Science graduate from Manhattan University with a passion for cloud systems, cybersecurity, IT infrastructure, and full-stack development.`;
 
   heroLinks.innerHTML = '';
   const contactLinks = [
@@ -1109,6 +1124,57 @@ const renderEducation = (education = []) => {
   });
 };
 
+const renderCertifications = (certifications = []) => {
+  const container = document.getElementById('education-cards');
+  if (!container || !Array.isArray(certifications) || certifications.length === 0) return;
+
+  const card = document.createElement('article');
+  card.dataset.animate = 'fade';
+  card.className =
+    'relative overflow-hidden rounded border shadow-2xl backdrop-blur-xl p-8 md:p-10 flex flex-col gap-6';
+  card.style.background = 'var(--bg-panel-strong)';
+  card.style.borderColor = 'var(--divider-color)';
+  card.style.borderRadius = '4px';
+
+  const header = document.createElement('div');
+  const eyebrow = document.createElement('p');
+  eyebrow.className = 'text-xs uppercase tracking-[0.4em] text-[var(--text-muted)] mb-2';
+  eyebrow.style.fontFamily = "'JetBrains Mono', monospace";
+  eyebrow.textContent = '// Certifications & Training';
+
+  const heading = document.createElement('h3');
+  heading.className = 'text-xl font-semibold text-[var(--text-primary)] leading-tight';
+  heading.textContent = 'Cloud, Security & Industry Credentials';
+  header.append(eyebrow, heading);
+
+  const grid = document.createElement('div');
+  grid.className = 'grid gap-3 sm:grid-cols-2';
+
+  certifications.forEach((cert) => {
+    const item = document.createElement('div');
+    item.className = 'edu-chip flex flex-col justify-between gap-1 rounded border px-4 py-3 text-sm';
+    item.dataset.stagger = '';
+    if ((cert.name || '').toLowerCase().includes('aws')) {
+      item.classList.add('edu-chip--accent');
+    }
+
+    const name = document.createElement('span');
+    name.className = 'font-medium text-[var(--text-primary)]';
+    name.textContent = cert.name;
+
+    const meta = document.createElement('span');
+    meta.className = 'text-xs text-[var(--text-muted)]';
+    meta.style.fontFamily = "'JetBrains Mono', monospace";
+    meta.textContent = [cert.provider, cert.date].filter(Boolean).join(' • ');
+
+    item.append(name, meta);
+    grid.appendChild(item);
+  });
+
+  card.append(header, grid);
+  container.appendChild(card);
+};
+
 // Fixed skills rendering - now uses correct keys from resume.json
 const renderSkills = (skills = {}) => {
   const groups = document.getElementById('skills-groups');
@@ -1116,10 +1182,11 @@ const renderSkills = (skills = {}) => {
   groups.innerHTML = '';
 
   // Highlighted items (these will appear first in their categories)
-  const highlightedLanguages = ['Python', 'TypeScript', 'JavaScript'];
-  const highlightedSecurity = ['Suricata (IDS)', 'Scapy', 'Wireshark', 'Nmap'];
-  const highlightedFrameworks = ['Qdrant', 'RAG', 'LangChain', 'Pinecone (Vector Databases)'];
-  const highlightedTools = ['Docker', 'ServiceNow', 'osTicket', 'Linux'];
+  const highlightedLanguages = ['Python', 'JavaScript', 'PowerShell', 'Bash'];
+  const highlightedCloud = ['AWS', 'Docker', 'Linux (Ubuntu)', 'Windows Server 2022', 'Active Directory'];
+  const highlightedSecurity = ['Suricata IDS', 'Scapy', 'osTicket', 'ServiceNow'];
+  const highlightedFrameworks = ['RAG', 'LangChain', 'Pinecone', 'Qdrant'];
+  const highlightedTools = ['Git', 'GitHub', 'Azure DevOps', 'Agile'];
   const highlightedInterests = ['Travel', 'Sci-Fi', 'Gym'];
 
   // Helper to sort highlighted items first
@@ -1137,6 +1204,7 @@ const renderSkills = (skills = {}) => {
   const getHighlighted = (type) => {
     switch (type) {
       case 'languages': return highlightedLanguages;
+      case 'cloud': return highlightedCloud;
       case 'security': return highlightedSecurity;
       case 'frameworks': return highlightedFrameworks;
       case 'tools': return highlightedTools;
@@ -1147,11 +1215,12 @@ const renderSkills = (skills = {}) => {
 
   // Updated mapping to match resume.json keys
   const mapping = [
-    { key: 'languages', label: 'Languages', type: 'languages' },
-    { key: 'securityNetworking', label: 'Security & Networking', type: 'security' },
-    { key: 'mlAI', label: 'ML / AI', type: 'frameworks' },
-    { key: 'tools', label: 'Infrastructure & Tools', type: 'tools' },
-    { key: 'spokenLanguages', label: 'Spoken Languages', type: 'spoken' },
+    { key: 'languages', label: 'Programming', type: 'languages' },
+    { key: 'cloudSystems', label: 'Cloud & Systems', type: 'cloud' },
+    { key: 'securityNetworking', label: 'Security & IT', type: 'security' },
+    { key: 'mlAI', label: 'AI & Data', type: 'frameworks' },
+    { key: 'tools', label: 'Tools & Platforms', type: 'tools' },
+    { key: 'spokenLanguages', label: 'Languages', type: 'spoken' },
     { key: 'interests', label: 'Interests', type: 'interests' },
   ];
 
@@ -1209,6 +1278,7 @@ const hydrateSite = async () => {
     renderProjects(data.projects, data.contact, data.githubRepos || {});
     renderExperience(data.experience);
     renderEducation(data.education);
+    renderCertifications(data.certifications);
     renderSkills(data.skills);
 
     registerAnimations();

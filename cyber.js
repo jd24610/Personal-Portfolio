@@ -164,19 +164,19 @@ const cmdSpan = document.getElementById('cyber-type-cmd');
 const terminalSequences = [
   {
     cmd: 'whoami',
-    output: 'joseph_decossard (security_researcher & account_executive)\nstatus: actively_securing\naffiliation: Manhattan University \'26 | Barker Consulting'
+    output: 'joseph_decossard (cs_graduate & account_executive)\nstatus: actively_securing\naffiliation: Manhattan University \'26 | Barker Consulting | Transition From The Hearts'
   },
   {
     cmd: 'cat focus_areas.json',
-    output: '[\n  "SOC Detection & Suricata IDS",\n  "Network & Telecom Troubleshooting",\n  "Authentication & MFA",\n  "ITSM & Endpoint Automation"\n]'
+    output: '[\n  "AWS Cloud & Systems",\n  "Active Directory & Windows Server 2022",\n  "SOC Detection & Suricata IDS",\n  "ITSM & Vulnerability Scanning"\n]'
   },
   {
     cmd: 'tail -n 3 /var/log/suricata/eve.json',
-    output: '{"event_type":"alert","src_ip":"10.0.2.15","alert":{"signature":"ET SCAN Scapy Crafted Packet"}}\n[>>] Python parser triggered -> Creating osTicket incident #4092...\n[OK] Ticket #4092 created (30s throttle active)'
+    output: '{"event_type":"alert","src_ip":"10.0.2.15","alert":{"signature":"ET SCAN Scapy Crafted Packet"}}\n[>>] Python parser triggered -> Creating osTicket incident #4092...\n[OK] Ticket #4092 created (REST API)'
   },
   {
     cmd: 'check_credentials --verify',
-    output: 'Access Granted.\nToken matches signature: 0xCAFEBABE...\nIdentity confirmed: Trilingual Speaker (English, French, Creole)'
+    output: 'AWS Cloud Bootcamp (CPE) — Nov 2026 [VERIFIED]\nAWS Certified Cloud Practitioner — Exam Scheduled Dec 2026\nIdentity confirmed: Trilingual Speaker (English, French, Creole)'
   }
 ];
 

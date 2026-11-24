@@ -1,12 +1,13 @@
 {
   "name": "Joseph Decossard",
   "contact": {
-    "phone": "+1 (646)-322-2356",
+    "phone": "(646) 322-2356",
     "email": "jedecossard@gmail.com",
     "linkedin": "https://www.linkedin.com/in/josephdecossard",
     "github": "https://github.com/jd24610",
     "githubSchool": "https://github.com/jdecossard01",
-    "location": "New York City, NY"
+    "website": "https://joseph.decossard.com",
+    "location": "New York, NY"
   },
   "education": [
     {
@@ -28,7 +29,7 @@
         "Computer Networks"
       ],
       "organizations": [
-        "Transition from the Heart (Web Developer & Online Social Management)"
+        "Transition From The Hearts (Web Developer)"
       ]
     }
   ],
@@ -39,37 +40,53 @@
       "title": "Account Executive",
       "teamFocus": "B2B Telecom & Network Connectivity",
       "date": "Sep 2026 – Present",
-      "location": "Manhattan, NY",
+      "location": "New York, NY",
       "logo": "assets/barker-logo.png",
       "logoAlt": "Barker Consulting logo",
-      "description": "Conduct sales and client outreach while managing a sales territory, assessing commercial networking setups, and troubleshooting business internet connectivity.",
+      "description": "Test and troubleshoot business internet connections, routers, and network equipment for Verizon Fios clients, assess network setups, and recommend upgrades.",
       "highlights": [
-        "Conduct sales and client outreach while managing a sales territory and building relationships with business owners across Manhattan",
-        "Test and troubleshoot business internet connections to identify connectivity issues and verify router and network equipment operation",
-        "Visit businesses in assigned areas to assess their current internet and networking setup and assist with Verizon FiOS services and upgrades",
-        "Communicate with business owners and staff to understand service needs and document customer details in CRM-based workflows"
+        "Test and troubleshoot business internet connections, routers, and network equipment for Verizon Fios clients to find and fix connectivity problems on site",
+        "Assess each client's current network setup and recommend upgrades that fit their needs and budget",
+        "Log client details and service requests in a CRM to keep follow-ups and recommendations on track"
       ],
-      "tags": ["Network Troubleshooting", "Verizon FiOS", "Router & Network Hardware", "CRM & Operations", "Client Outreach", "Data Analysis"]
+      "tags": ["Verizon Fios", "Network Troubleshooting", "Routers & Hardware", "CRM", "Client Advisory", "B2B Telecom"]
     },
     {
       "id": "02",
+      "company": "Transition From The Hearts",
+      "title": "Web Developer (Contract)",
+      "teamFocus": "Nonprofit Web Presence & Operations",
+      "date": "Feb 2026 – Present",
+      "location": "New York, NY",
+      "logo": null,
+      "logoAlt": "Transition From The Hearts",
+      "description": "Built the nonprofit's full online presence from scratch—including website, domain, hosting, and business email—translating non-technical goals into working features.",
+      "highlights": [
+        "Built the nonprofit's full online presence from scratch, including the website, domain, hosting, and business email",
+        "Turn the owner's non-technical goals into working features and clear next steps, balancing design against budget",
+        "Maintain the site and fix issues as the organization's needs change"
+      ],
+      "tags": ["HTML/CSS", "JavaScript", "Hosting & Domain", "Business Email", "Client Consulting", "Maintenance"]
+    },
+    {
+      "id": "03",
       "company": "Manhattan University",
-      "title": "MU Summer Conference Assistant",
+      "title": "Conference Assistant",
       "teamFocus": "Summer Conferences & Events",
       "date": "May 2025 – Aug 2025",
       "location": "Riverdale, NY",
       "logo": "assets/mu-logo.svg",
       "logoAlt": "Manhattan University logo",
-      "description": "Managed check-ins and room logistics for guest groups of several hundred students every two weeks, resolving facility issues in a fast-paced environment.",
+      "description": "Managed check-ins and room assignments for groups of several hundred students every two weeks, coordinating room logistics and resolving facility issues quickly.",
       "highlights": [
-        "Managed check-ins and room logistics for guest groups of several hundred students every two weeks, resolving facility issues in a fast-paced environment",
-        "Managed room assignment logistics and escorted guests to accommodations prior to arrivals",
-        "Maintained professionalism and composure in a high-volume, fast-paced customer-facing environment"
+        "Managed check-ins and room assignments for groups of several hundred students every two weeks",
+        "Coordinated room logistics so large groups arrived and settled in smoothly",
+        "Solved facility issues quickly in a fast-paced setting to keep the guest experience positive"
       ],
-      "tags": ["Customer Service", "Event Management", "Logistics", "Communication"]
+      "tags": ["Logistics", "Operations", "Customer Service", "Facility Support", "Communication"]
     },
     {
-      "id": "03",
+      "id": "04",
       "company": "Legoland",
       "title": "Supervisor",
       "teamFocus": "Restaurant Operations",
@@ -86,7 +103,7 @@
       "tags": ["Leadership", "Operations", "Training", "Team Management"]
     },
     {
-      "id": "04",
+      "id": "05",
       "company": "Hebrew Educational Society Summer Camp",
       "title": "Camp Counselor",
       "teamFocus": "Youth Programs",
@@ -105,6 +122,58 @@
   ],
   "projects": [
     {
+      "name": "Mini SOC Detection Pipeline",
+      "tech": ["Python", "Suricata", "Scapy", "osTicket API", "Ubuntu"],
+      "location": "Personal Project • 2026",
+      "description": [
+        "Built an end-to-end monitoring pipeline that flags suspicious traffic with Suricata IDS and opens osTicket tickets automatically through its REST API.",
+        "Deployed it on a self-managed Ubuntu Server VM and worked through ARM64 and Apple Silicon virtualization issues.",
+        "Wrote and tested the Python scripts and API calls, using AI coding tools to speed up prototyping and debugging."
+      ],
+      "repo": "https://github.com/jd24610/mini-soc-detection-pipeline",
+      "logo": null,
+      "logoAlt": null
+    },
+    {
+      "name": "Web Application Vulnerability Scanner",
+      "tech": ["Python", "REST APIs", "LLMs", "RAG", "TLS/HTTP Auditing"],
+      "location": "Personal Project • 2026",
+      "description": [
+        "Wrote a scanner that finds missing HTTP security headers, weak TLS settings, and insecure cookies.",
+        "Designed URL risk scoring that combines Google Safe Browsing, VirusTotal, and PhishTank with LLM-based phishing detection.",
+        "Integrated LLMs, RAG workflows, and REST APIs with AI-assisted development to prototype and improve the tool."
+      ],
+      "repo": "https://github.com/jd24610/Cybersecuirty-Risk-Scanner",
+      "logo": null,
+      "logoAlt": null
+    },
+    {
+      "name": "Active Directory Home Lab",
+      "tech": ["Windows Server 2022", "AD DS", "DNS", "PowerShell"],
+      "location": "Personal Project • 2026",
+      "description": [
+        "Set up a Windows Server 2022 domain controller and built the corp.local Active Directory domain.",
+        "Created users, department OUs, and security groups, then set IT group membership to show role-based access.",
+        "Verified domain sign-in and DNS resolution with whoami and nslookup."
+      ],
+      "repo": null,
+      "logo": null,
+      "logoAlt": null
+    },
+    {
+      "name": "osTicket ITSM Deployment",
+      "tech": ["Docker", "PHP", "MySQL", "Apache", "Linux"],
+      "location": "Personal Project • 2026",
+      "description": [
+        "Deployed a self-hosted osTicket help desk system using Docker and a custom Dockerfile.",
+        "Fixed MySQL 8 authentication errors and missing dependencies to get the system running reliably.",
+        "Debugged failed container builds caused by base image and libicu-dev issues to make setup repeatable."
+      ],
+      "repo": "https://github.com/jd24610/osticket-docker-lab",
+      "logo": null,
+      "logoAlt": null
+    },
+    {
       "name": "Self-Healing Endpoint Dashboard",
       "tech": ["Python", "psutil", "rich", "IT Operations"],
       "location": "Personal Project • 2026",
@@ -114,44 +183,6 @@
         "Used rich's Live display for a continuously updating terminal UI; leveraged AI-assisted development workflows to rapidly prototype and refine IT operations tooling."
       ],
       "repo": "https://github.com/jd24610/self-healing-endpoint-dashboard",
-      "logo": null,
-      "logoAlt": null
-    },
-    {
-      "name": "Mini SOC Detection Pipeline",
-      "tech": ["Suricata", "Scapy", "Python", "osTicket API", "Ubuntu Server (ARM64)"],
-      "location": "Personal Project • 2026",
-      "description": [
-        "Stood up an end-to-end detection pipeline: Scapy-crafted traffic → Suricata IDS alerts (eve.json) → Python parser → automated osTicket creation.",
-        "Applied AI-native development workflows to build and iterate on REST APIs and internal security tools while maintaining testing and Git-based practices.",
-        "Configured and deployed on a self-managed Ubuntu Server VM, handling ARM64/Apple Silicon virtualization constraints."
-      ],
-      "repo": "https://github.com/jd24610/mini-soc-detection-pipeline",
-      "logo": null,
-      "logoAlt": null
-    },
-    {
-      "name": "osTicket ITSM Deployment (Docker)",
-      "tech": ["Docker", "PHP", "MySQL", "Apache", "Linux"],
-      "location": "Personal Project • 2026",
-      "description": [
-        "Deployed a self-hosted osTicket ITSM instance using a custom Dockerfile after resolving MySQL 8 authentication and missing dependency issues in the upstream image.",
-        "Debugged container build failures end-to-end (broken base image, libicu-dev dependency) to produce a stable, reproducible ticketing environment."
-      ],
-      "repo": "https://github.com/jd24610/osticket-docker-lab",
-      "logo": null,
-      "logoAlt": null
-    },
-    {
-      "name": "Web Application Vulnerability Scanner",
-      "tech": ["Python", "TLS/Cookie Auditing", "VirusTotal API", "LLM / RAG"],
-      "location": "Personal Project • 2026",
-      "description": [
-        "Built a scanner that audits live websites for missing security headers, weak TLS configuration, and insecure cookie flags.",
-        "Designed a companion URL risk-assessment architecture combining Google Safe Browsing, VirusTotal, and PhishTank with an LLM-based secondary layer for phishing/brand-impersonation detection.",
-        "Integrated LLMs, RAG workflows, and external threat intelligence APIs into scalable security assessment components."
-      ],
-      "repo": "https://github.com/jd24610/Cybersecuirty-Risk-Scanner",
       "logo": null,
       "logoAlt": null
     },
@@ -220,13 +251,13 @@
       "logoAlt": null
     },
     {
-      "name": "Transition from the Heart Website",
-      "tech": ["HTML", "CSS", "JavaScript", "Web Development", "Social Media Management"],
-      "location": "Freelance / Nonprofit Project",
+      "name": "Transition From The Hearts Website",
+      "tech": ["HTML", "CSS", "JavaScript", "Domain & Hosting", "Business Email"],
+      "location": "Web Developer (Contract) • 2026",
       "description": [
-        "Designed, built, and launched the official website for the Transition from the Heart nonprofit organization, showcasing their programs, services, and community impact.",
-        "Managed online social presence, establishing channel integrations and digital outreach frameworks.",
-        "Improved website SEO, mobile responsiveness, and layout architecture for volunteer and donor onboarding."
+        "Built the nonprofit's full online presence from scratch, including the website, domain, hosting, and business email.",
+        "Translated the owner's non-technical goals into working features and clear next steps, balancing design against budget.",
+        "Ongoing site maintenance, SEO improvements, and feature updates as organizational needs evolve."
       ],
       "repo": null,
       "logo": null,
@@ -246,6 +277,16 @@
     }
   ],
   "certifications": [
+    {
+      "name": "AWS Cloud Bootcamp, Certificate of Participation (CPE)",
+      "provider": "Amazon Web Services (AWS)",
+      "date": "Nov 2026"
+    },
+    {
+      "name": "AWS Certified Cloud Practitioner (In Progress, Exam Scheduled)",
+      "provider": "Amazon Web Services (AWS)",
+      "date": "Dec 2026"
+    },
     {
       "name": "Product Management Job Simulation",
       "provider": "Electronic Arts (Forage)",
@@ -280,47 +321,59 @@
   "skills": {
     "languages": [
       "Python",
+      "Java",
       "JavaScript",
       "TypeScript",
       "C++",
-      "SQL (SQLite)",
-      "CSS",
-      "HTML",
-      "MATLAB",
-      "Java",
-      "Bash"
+      "SQL",
+      "Bash",
+      "PowerShell",
+      "HTML/CSS",
+      "MATLAB"
+    ],
+    "cloudSystems": [
+      "AWS",
+      "Docker",
+      "Linux (Ubuntu)",
+      "Windows Server 2022",
+      "Active Directory",
+      "DNS",
+      "Firebase",
+      "Node.js"
     ],
     "securityNetworking": [
-      "Suricata (IDS)",
+      "Suricata IDS",
       "Scapy",
+      "Vulnerability Scanning",
+      "TLS/HTTP Analysis",
+      "osTicket",
+      "ServiceNow",
       "Wireshark",
       "Nmap",
-      "TLS/Cookie Auditing",
       "OAuth 2.0/MFA",
       "SEED Labs (TCP/IP, PKI)"
     ],
     "mlAI": [
-      "Qdrant",
-      "Pinecone (Vector Databases)",
-      "HuggingFace",
       "RAG",
-      "Prompt Engineering",
       "LangChain",
+      "Prompt Engineering",
+      "Pinecone",
+      "Qdrant",
+      "MySQL",
+      "SQLite",
+      "HuggingFace",
       "Semantic Search",
       "Lightning.ai"
     ],
     "tools": [
-      "Docker",
-      "ServiceNow",
-      "osTicket",
-      "Vercel",
-      "Firebase",
-      "Git/GitHub/GitLab",
+      "Git",
+      "GitHub",
+      "GitLab",
       "Azure DevOps",
-      "Linux",
-      "MacOS",
+      "Agile",
       "REST APIs",
-      "Node.js"
+      "Vercel",
+      "MacOS"
     ],
     "spokenLanguages": [
       "English",

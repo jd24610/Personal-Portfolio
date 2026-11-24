@@ -197,6 +197,7 @@ This project is open source and available for educational purposes. Feel free to
 
 ## 📬 Contact
 
+- **Website**: [joseph.decossard.com](https://joseph.decossard.com)
 - **Email**: jedecossard@gmail.com
 - **LinkedIn**: [linkedin.com/in/josephdecossard](https://linkedin.com/in/josephdecossard)
 - **GitHub**: [github.com/jd24610](https://github.com/jd24610)
@@ -211,5 +212,5 @@ This project is open source and available for educational purposes. Feel free to
 
 **Built with curiosity, deployed with passion.** 🚀
 
-Last Updated: October 2026
+Last Updated: November 2026
 

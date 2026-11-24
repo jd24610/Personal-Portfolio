@@ -138,6 +138,8 @@ canvas#bg-canvas {
 .site-header {
   position: fixed;
   top: 1.25rem;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -150,7 +152,7 @@ canvas#bg-canvas {
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(12px);
   transition: all 0.3s ease;
-  width: min(100%, 1100px);
+  width: min(calc(100% - 2rem), 1100px);
   margin: 0 auto;
 }
 
@@ -193,8 +195,8 @@ canvas#bg-canvas {
 
 .primary-nav {
   display: flex;
-  gap: 1.5rem;
-  font-size: 0.9rem;
+  gap: clamp(0.75rem, 1.5vw, 1.5rem);
+  font-size: clamp(0.8rem, 1.1vw, 0.9rem);
   flex-wrap: wrap;
   flex: 1;
   justify-content: center;
@@ -207,6 +209,7 @@ canvas#bg-canvas {
   transition: color 0.3s ease;
   position: relative;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .primary-nav a::before {
@@ -1758,6 +1761,10 @@ main section {
 /* Syntax highlighting colors for different categories */
 .skill-group[data-type="languages"] .skill-tag {
   color: var(--accent-secondary);
+}
+
+.skill-group[data-type="cloud"] .skill-tag {
+  color: #ffb84d;
 }
 
 .skill-group[data-type="security"] .skill-tag {
